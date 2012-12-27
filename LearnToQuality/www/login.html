@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html  style="height:800px;">
+    <head>
+
+        
+        <style>
+            body.connected #login { display: none; }
+            body.connected #logout { display: block; }
+            body.not_connected #login { display: block; }
+            body.not_connected #logout { display: none; }
+        </style>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+            <meta charset="utf-8">
+                <link href="css/style.css" rel="stylesheet">
+                    <link rel="stylesheet" type="text/css" href="css/index.css" />
+                    <!--<link rel="stylesheet" type="text/css" href="css/plugin.css" />-->
+                    <script>
+                        </script>
+                    <script src="js\tabs.js"></script>
+                    <script type="text/javascript" src="cordova-2.0.0.js"></script>
+                    <script type="text/javascript" src="js/index.js"></script>
+                    <!--<script type="text/javascript" src="js/FacebookConnect.js"></script>-->
+                    <script type="text/javascript" src="js/GoogleAnalyticsPlugin.js"></script>
+                    </head>
+    <body>
+        
+        
+        <script>
+           // var APP_ID = '427184117333764';
+            document.addEventListener('deviceready', initiateLogin , false);
+            
+            function initiateLogin(){
+                
+                /** TODO : make sure it works fine **/
+                /******* google analytics BEG ***********/
+                var googleAnalytics = window.plugins.googleAnalyticsPlugin;
+                googleAnalytics.startTrackerWithAccountID("UA-35775480-1");
+                googleAnalytics.trackEvent("category", "action", "label goes here", 666);
+                googleAnalytics.trackPageview("/test");
+                /******* google analytics END***********/
+                
+                /** Set The Login link **/
+                if (localStorage.getItem('email')==null || localStorage.getItem('email')=='' ){
+                    document.body.className = 'not_connected';
+                }else{
+                    document.body.className = 'connected';
+                }
+                
+                return;
+            }
+        </script>
+        
+        <script>
+            function setContentName(contentName){
+                sessionStorage.setItem('currentContent',contentName) ;
+            }
+
+
+            Storage.prototype.setObject = function(key, value)
+            {
+                this.setItem(key, JSON.stringify(value));
+            }
+                
+            Storage.prototype.getObject = function(key)
+            {
+                var value = this.getItem(key);
+                return value && JSON.parse(value);
+            }
+            
+            Object.size = function(obj)
+            {
+                var size = 0, key;
+                for (key in obj) {
+                    if (obj.hasOwnProperty(key)) size++;
+                }
+                return size;
+            };
+
+
+            function isEmpty(obj)
+            {
+                var name;
+                for (name in obj) {
+                    if (obj.hasOwnProperty(name)) {
+                        return false;
+                    }
+                }
+                return true;
+            };
+                
+        </script>
+
+        
+        <div id="login">  
+            	<div class="toolbar">
+               		<div class="logo"><img src="img/logo.png" width="141" height="23" alt="LearnToQuality" /></div> 
+                </div>
+                
+                <div class="pagecontent"> 
+                	<div class="login-back"> 
+                    
+                        <div class="login-btns-holder">                    
+                            <a href="#" class="login-btn">Login</a>                        
+                            <a href="#" class="login-btn">Register</a>
+                         </div>
+                
+                   
+                   </div>
+                   
+               </div>
+               
+        </div>
+        
+        
+    </body>
+</html>
