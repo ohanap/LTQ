@@ -109,7 +109,7 @@
                     //    alert(localStorage.key(i).statsWith("LTQ.ETF."));
                     if((localStorage.key(i)).startsWith("LTQ.ETF."))
                     {
-                        alert(localStorage.key(i));
+                        //alert(localStorage.key(i));
                         localStorage.removeItem(localStorage.key(i));
                     }
                 }
@@ -123,10 +123,15 @@
                		<div class="logo"><img src="img/logo.png" width="141" height="23" alt="LearnToQuality" /></div>
                     <div class="tabs">
                         <ul>
+                            <!--<li id="tabHeader_1"><div class="homeBtn">Home</div></li>
+                            <li id="tabHeader_2"><div class="ProgressBtn">Progress</div></li>
+                            <li id="tabHeader_3"><div class="SettingBtn">Settings</div></li>
+                        -->
                             <li id="tabHeader_1"><div class="homeBtn">Home</div></li>
                             <li id="tabHeader_2"><div class="ProgressBtn">Progress</div></li>
                             <li id="tabHeader_3"><div class="SettingBtn">Settings</div></li>
-                        </ul>
+                            
+                             </ul>
                     </div>
                 </div>
                 <div class="tabscontent">
@@ -268,7 +273,7 @@
                     
                     <!-- todo: build this section -->
                     <div class="tabpage" id="tabpage_2">
-                        <script> alert("HERE"); </script>
+                        
                         <!-- LB: Changed to include progress bar: ProgressBar.js-->
                         <div id="progress">
                             

@@ -397,7 +397,7 @@ padding: 1px;
 	height: 100px !important;
 }
 
-.sortable {width:95%; margin:0 auto;}
+.sortable {width:100%; margin:0 auto;}
 .sortable th, .pbTable th {	
 	background-color:#f2f2f2;
 	background-image:linear-gradient(top, #cccccc 0%, #f2f2f2 51%);
