@@ -97,21 +97,73 @@
                 return(this.indexOf(needle) == 0);
             };
             
-            
+            function updateProgressBar()
+            {
+                var pbCanvas = document.getElementsByClassName('pbCanvas');
+                var totalScore = 0;
+                var totalChapters = pbCanvas.length;
+                var progress = 0;
+                var score = "0%";
+                
+                for (var i = [0]; i < pbCanvas.length; i++)
+                {
+                    var chapter = pbCanvas[i].id.split("_")[0];
+                    var chapterScore = document.getElementById(chapter + "_score" + i);
+                    
+                    var myArray = localStorage.getObject(chapter);
+                    var countCorrectAnswers = localStorage.getItem(chapter + "_correctAnswer");
+                    var totalQuestions = localStorage.getItem(chapter + "_Total");
+                    
+                    if(myArray != null && !isEmpty(myArray))
+                    {
+                        if(totalQuestions > 0)
+                        {
+                            var size = Object.size(myArray);
+                            progress = size/totalQuestions;
+                            var pctScore = Math.round(countCorrectAnswers/size * 100);
+                            score = pctScore + "%";
+                            totalScore = totalScore + pctScore;
+                        }
+                        else{
+                            progress = 0;
+                            score = "0%";
+                        }
+                    }
+                    else
+                    {
+                        progress = 0;
+                        score = "0%";
+                    }
+                    
+                    new BFA.ProgressBar(pbCanvas[i].id, progress, "");
+                    chapterScore.innerHTML = score;
+                }
+                
+                var classTotalScore = document.getElementById('totalScore');
+                
+                classTotalScore.innerHTML = Math.round(totalScore/totalChapters) + "%";
+            }
             
             function clearLocalStorage()
             {
                 //localStorage.clear();
-                for (var i = 0; i < localStorage.length; i++)
+                var conf = confirm("Are you sure you want to clean all the quiz progress?");
+                
+                if(conf == true)
                 {
-                    
-                    //localStorage.getItem(localStorage.key(i));
-                    //    alert(localStorage.key(i).statsWith("LTQ.ETF."));
-                    if((localStorage.key(i)).startsWith("LTQ.ETF."))
+                    for (var i = 0; i < localStorage.length; i++)
                     {
-                        //alert(localStorage.key(i));
-                        localStorage.removeItem(localStorage.key(i));
+                        
+                        //localStorage.getItem(localStorage.key(i));
+                        //    alert(localStorage.key(i).statsWith("LTQ.ETF."));
+                        if((localStorage.key(i)).startsWith("LTQ.ETF."))
+                        {
+                            //alert(localStorage.key(i));
+                            localStorage.removeItem(localStorage.key(i));
+                        }
                     }
+                    
+                    updateProgressBar();
                 }
             }
             </script>
@@ -396,50 +448,9 @@
                             <script src="js/ProgressBar.js"></script>
                             <script type="text/javascript">
                                 
-                                var pbCanvas = document.getElementsByClassName('pbCanvas');
-                                var totalScore = 0;
-                                var totalChapters = pbCanvas.length;
-                                var progress = 0;
-                                var score = "0%";
-                                
-                                for (var i = [0]; i < pbCanvas.length; i++)
-                                {
-                                    var chapter = pbCanvas[i].id.split("_")[0];
-                                    var chapterScore = document.getElementById(chapter + "_score" + i);
-                                    
-                                    var myArray = localStorage.getObject(chapter);
-                                    var countCorrectAnswers = localStorage.getItem(chapter + "_correctAnswer");
-                                    var totalQuestions = localStorage.getItem(chapter + "_Total");
-                                    
-                                    if(myArray != null && !isEmpty(myArray))
-                                    {
-                                        if(totalQuestions > 0)
-                                        {
-                                            var size = Object.size(myArray);
-                                            progress = size/totalQuestions;
-                                            var pctScore = Math.round(countCorrectAnswers/size * 100);
-                                            score = pctScore + "%";
-                                            totalScore = totalScore + pctScore;
-                                        }
-                                        else{
-                                            progress = 0;
-                                            score = "0%";
-                                        }
-                                    }
-                                    else
-                                    {
-                                        progress = 0;
-                                        score = "0%";
-                                    }
-                                    
-                                    new BFA.ProgressBar(pbCanvas[i].id, progress, "");
-                                    chapterScore.innerHTML = score;
-                                }
-                                
-                                var classTotalScore = document.getElementById('totalScore');
-                                
-                                classTotalScore.innerHTML = Math.round(totalScore/totalChapters) + "%";
-                                </script>
+                                updateProgressBar();
+                               
+                            </script>
                         </div>
                         
                         
@@ -477,8 +488,8 @@
                         
                         <div class="settings-reg-holder">
                             <p class="settings-reg">
-                            <a href="javascript:clearLocalStorage()" class="reg-another-lnk">Clear Local Storage</a>
-                            <span class="reg-note">You will lose all your test data!</span>
+                            <a href="javascript:clearLocalStorage()" class="reg-another-lnk">Clear Quiz Progress</a>
+                            <span class="reg-note">You will lose all your quiz progress!</span>
                             </p>
                         </div>
                         
