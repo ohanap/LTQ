@@ -190,7 +190,7 @@
                                                     <tr>
                                                         <td>1</td>
                                                         <td>
-                                                            <a id = "LTQ.ETF.ch0" title = 'Introduction to ETFs' class = 'chapter' href="show_lesson.html" onClick="setContentName('1-ETFsIntroduction')">Introduction to ETFs</a>
+                                                            <a id = "LTQ.ETF.ch0" title = 'Introduction to ETFs' class = 'chapter' href="show_lesson.html" onClick="setContentName('chapter0')">Introduction to ETFs</a>
                                                         </td>
                                                         <td><a href="ETF0Quiz.html" class="sort-quiz">Quiz</a></td>
                                                         
@@ -198,7 +198,7 @@
                                                     <tr>
                                                         <td>2</td>
                                                         <td>
-                                                            <a id = "LTQ.ETF.ch1" title = 'Investing in ETFs' class = 'chapter' href="show_lesson.html" onClick="setContentName('2-InvestmentInETFs')">Investing in ETFs</a>
+                                                            <a id = "LTQ.ETF.ch1" title = 'Investing in ETFs' class = 'chapter' href="show_lesson.html" onClick="setContentName('chapter1')">Investing in ETFs</a>
                                                         </td>
                                                         <td><a href="ETF1Quiz.html" class="sort-quiz">Quiz</a></td>
                                                     </tr>
@@ -206,7 +206,7 @@
                                                         <td>3</td>
                                                         <td>
                                                             
-                                                            <a id = "LTQ.ETF.ch2"  title = 'ETFs Valuation' class = 'chapter' href="show_lesson.html" onClick="setContentName('3-ETFsValuation')">ETFs Valuation</a>
+                                                            <a id = "LTQ.ETF.ch2"  title = 'ETFs Valuation' class = 'chapter' href="show_lesson.html" onClick="setContentName('chapter2')">ETFs Valuation</a>
                                                         </td>
                                                         <td><a href="ETF2Quiz.html" class="sort-quiz">Quiz</a></td>
                                                     </tr>
@@ -309,10 +309,15 @@
                                                     newLessonATD.setAttribute('id','');
                                                     newLessonATD.setAttribute('title','');
                                                     newLessonATD.setAttribute('class','lesson');
-                                                    newLessonATD.setAttribute('href','#');
-                                                    newLessonATD.setAttribute('onClick','');
+                                                    newLessonATD.setAttribute('href','show_lesson.html');
+                                                    newLessonATD.setAttribute('onClick','setContentName("chapter' + i + '")');
                                                     newLessonATD.innerHTML = chapters[i].title;;
                                                     newChapterTD.appendChild(newLessonATD);
+                                                    
+                                                    
+                                                                                                    
+                                                    
+                                                    
                                                     
                                                     newRow.appendChild(newChapterTD);
                                                     

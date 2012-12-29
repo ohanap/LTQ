@@ -68,8 +68,8 @@
 		763750A11683A78B0075D8F5 /* Reader-Print@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7637508E1683A78B0075D8F5 /* Reader-Print@2x.png */; };
 		763750A21683A78B0075D8F5 /* Reader-Thumbs.png in Resources */ = {isa = PBXBuildFile; fileRef = 7637508F1683A78B0075D8F5 /* Reader-Thumbs.png */; };
 		763750A31683A78B0075D8F5 /* Reader-Thumbs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 763750901683A78B0075D8F5 /* Reader-Thumbs@2x.png */; };
-		763750A61683AF8B0075D8F5 /* 1-ETFsIntroduction.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 763750A41683AF8B0075D8F5 /* 1-ETFsIntroduction.pdf */; };
-		763750A91686CD060075D8F5 /* 2-InvestmentInETFs.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 763750A81686CD060075D8F5 /* 2-InvestmentInETFs.pdf */; };
+		763750A61683AF8B0075D8F5 /* chapter0.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 763750A41683AF8B0075D8F5 /* chapter0.pdf */; };
+		763750A91686CD060075D8F5 /* chapter1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 763750A81686CD060075D8F5 /* chapter1.pdf */; };
 		76854E3416838433002CBAB3 /* ReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76854E2A16838068002CBAB3 /* ReaderViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		76854E35168385A1002CBAB3 /* ReaderContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76854E1216838068002CBAB3 /* ReaderContentView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		76854E36168385F1002CBAB3 /* ReaderContentPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 76854E0E16838068002CBAB3 /* ReaderContentPage.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -95,7 +95,7 @@
 		76E21E53162CABE70070FAF0 /* ChildBrowserCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E21E4E162CABE70070FAF0 /* ChildBrowserCommand.m */; };
 		76E21E54162CABE70070FAF0 /* ChildBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E21E50162CABE70070FAF0 /* ChildBrowserViewController.m */; };
 		76E21E55162CABE70070FAF0 /* ChildBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76E21E51162CABE70070FAF0 /* ChildBrowserViewController.xib */; };
-		76E3A37816874DCB008A730A /* 3-ETFsValuation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 76E3A37716874DCB008A730A /* 3-ETFsValuation.pdf */; };
+		76E3A37816874DCB008A730A /* chapter2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 76E3A37716874DCB008A730A /* chapter2.pdf */; };
 		76F0406D163C857A00572863 /* GoogleAnalyticsPlugin.js in Sources */ = {isa = PBXBuildFile; fileRef = 76F04067163C857A00572863 /* GoogleAnalyticsPlugin.js */; };
 		76F0406E163C857A00572863 /* GoogleAnalyticsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F04068163C857A00572863 /* GoogleAnalyticsPlugin.m */; };
 		76F0406F163C857A00572863 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F0406B163C857A00572863 /* libGoogleAnalytics.a */; };
@@ -224,8 +224,8 @@
 		7637508E1683A78B0075D8F5 /* Reader-Print@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Reader-Print@2x.png"; sourceTree = "<group>"; };
 		7637508F1683A78B0075D8F5 /* Reader-Thumbs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Reader-Thumbs.png"; sourceTree = "<group>"; };
 		763750901683A78B0075D8F5 /* Reader-Thumbs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Reader-Thumbs@2x.png"; sourceTree = "<group>"; };
-		763750A41683AF8B0075D8F5 /* 1-ETFsIntroduction.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "1-ETFsIntroduction.pdf"; sourceTree = "<group>"; };
-		763750A81686CD060075D8F5 /* 2-InvestmentInETFs.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "2-InvestmentInETFs.pdf"; sourceTree = "<group>"; };
+		763750A41683AF8B0075D8F5 /* chapter0.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = chapter0.pdf; sourceTree = "<group>"; };
+		763750A81686CD060075D8F5 /* chapter1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = chapter1.pdf; sourceTree = "<group>"; };
 		76854DD716837E30002CBAB3 /* Reader.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Reader.xcodeproj; path = "../Reader-master/Reader.xcodeproj"; sourceTree = "<group>"; };
 		76854DDE16838068002CBAB3 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		76854DE016838068002CBAB3 /* ReaderAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReaderAppDelegate.h; sourceTree = "<group>"; };
@@ -310,7 +310,7 @@
 		76E21E4F162CABE70070FAF0 /* ChildBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildBrowserViewController.h; sourceTree = "<group>"; };
 		76E21E50162CABE70070FAF0 /* ChildBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildBrowserViewController.m; sourceTree = "<group>"; };
 		76E21E51162CABE70070FAF0 /* ChildBrowserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildBrowserViewController.xib; sourceTree = "<group>"; };
-		76E3A37716874DCB008A730A /* 3-ETFsValuation.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "3-ETFsValuation.pdf"; sourceTree = "<group>"; };
+		76E3A37716874DCB008A730A /* chapter2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = chapter2.pdf; sourceTree = "<group>"; };
 		76F04066163C857A00572863 /* GoogleAnalyticsPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleAnalyticsPlugin.h; sourceTree = "<group>"; };
 		76F04067163C857A00572863 /* GoogleAnalyticsPlugin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = GoogleAnalyticsPlugin.js; sourceTree = "<group>"; };
 		76F04068163C857A00572863 /* GoogleAnalyticsPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleAnalyticsPlugin.m; sourceTree = "<group>"; };
@@ -359,6 +359,7 @@
 				302D95EF14D2391D003F00A1 /* MainViewController.m */,
 				302D95F014D2391D003F00A1 /* MainViewController.xib */,
 				1D3623240D0F684500981E51 /* AppDelegate.h */,
+				76F04065163C857A00572863 /* GoogleAnalytics */,
 				1D3623250D0F684500981E51 /* AppDelegate.m */,
 			);
 			name = Classes;
@@ -432,9 +433,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				76E3A37716874DCB008A730A /* 3-ETFsValuation.pdf */,
-				763750A81686CD060075D8F5 /* 2-InvestmentInETFs.pdf */,
-				763750A41683AF8B0075D8F5 /* 1-ETFsIntroduction.pdf */,
+				76E3A37716874DCB008A730A /* chapter2.pdf */,
+				763750A81686CD060075D8F5 /* chapter1.pdf */,
+				763750A41683AF8B0075D8F5 /* chapter0.pdf */,
 				30A0434214DC770100060A13 /* de.lproj */,
 				30A0434514DC770100060A13 /* se.lproj */,
 				1F766FDB13BBADB100FB74C0 /* en.lproj */,
@@ -486,7 +487,6 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				76F04065163C857A00572863 /* GoogleAnalytics */,
 				76E21E4C162CABE70070FAF0 /* ChildBrowser.bundle */,
 				76E21E4D162CABE70070FAF0 /* ChildBrowserCommand.h */,
 				76E21E4E162CABE70070FAF0 /* ChildBrowserCommand.m */,
@@ -715,7 +715,8 @@
 				76F04069163C857A00572863 /* GoogSDK */,
 				76F0406C163C857A00572863 /* README.md */,
 			);
-			path = GoogleAnalytics;
+			name = GoogleAnalytics;
+			path = ../Plugins/GoogleAnalytics;
 			sourceTree = "<group>";
 		};
 		76F04069163C857A00572863 /* GoogSDK */ = {
@@ -878,9 +879,9 @@
 				763750A11683A78B0075D8F5 /* Reader-Print@2x.png in Resources */,
 				763750A21683A78B0075D8F5 /* Reader-Thumbs.png in Resources */,
 				763750A31683A78B0075D8F5 /* Reader-Thumbs@2x.png in Resources */,
-				763750A61683AF8B0075D8F5 /* 1-ETFsIntroduction.pdf in Resources */,
-				763750A91686CD060075D8F5 /* 2-InvestmentInETFs.pdf in Resources */,
-				76E3A37816874DCB008A730A /* 3-ETFsValuation.pdf in Resources */,
+				763750A61683AF8B0075D8F5 /* chapter0.pdf in Resources */,
+				763750A91686CD060075D8F5 /* chapter1.pdf in Resources */,
+				76E3A37816874DCB008A730A /* chapter2.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
