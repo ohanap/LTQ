@@ -57,8 +57,15 @@
     // Create a view of the standard size at the bottom of the screen.
     // Available AdSize constants are explained in GADAdSize.h.
     bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
-    // Must be a better way to position at bottom of page 
-    [bannerView_ setCenter:CGPointMake(kGADAdSizeBanner.size.width/2, 435)];
+
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    CGFloat screenXPos = (screenWidth/2);
+    CGFloat screenYPos = screenHeight - kGADAdSizeBanner.size.height;
+    [bannerView_ setCenter:CGPointMake(screenXPos, screenYPos)];
+    
+    
     // Specify the ad's "unit identifier." This is your AdMob Publisher ID.
     bannerView_.adUnitID = MY_BANNER_UNIT_ID;
     // Let the runtime know which UIViewController to restore after taking
@@ -72,6 +79,7 @@
     request.testing = NO;
     [bannerView_ loadRequest:request];
 }
+
 
 - (void) viewDidUnload
 {
@@ -87,38 +95,6 @@
     return [super shouldAutorotateToInterfaceOrientation:interfaceOrientation];
 }
 
-/* Comment out the block below to over-ride */
-/*
-- (CDVCordovaView*) newCordovaViewWithFrame:(CGRect)bounds
-{
-    return[super newCordovaViewWithFrame:bounds];
-}
-*/
-
-/* Comment out the block below to over-ride */
-/*
-#pragma CDVCommandDelegate implementation
-
-- (id) getCommandInstance:(NSString*)className
-{
-	return [super getCommandInstance:className];
-}
-
-- (BOOL) execute:(CDVInvokedUrlCommand*)command
-{
-	return [super execute:command];
-}
-
-- (NSString*) pathForResource:(NSString*)resourcepath;
-{
-	return [super pathForResource:resourcepath];
-}
- 
-- (void) registerPlugin:(CDVPlugin*)plugin withClassName:(NSString*)className
-{
-    return [super registerPlugin:plugin withClassName:className];
-}
-*/
 
 #pragma UIWebDelegate implementation
 
@@ -139,23 +115,5 @@
 	return [super webViewDidFinishLoad:theWebView];
 }
 
-/* Comment out the block below to over-ride */
-/*
-
-- (void) webViewDidStartLoad:(UIWebView*)theWebView 
-{
-	return [super webViewDidStartLoad:theWebView];
-}
-
-- (void) webView:(UIWebView*)theWebView didFailLoadWithError:(NSError*)error 
-{
-	return [super webView:theWebView didFailLoadWithError:error];
-}
-
-- (BOOL) webView:(UIWebView*)theWebView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType
-{
-	return [super webView:theWebView shouldStartLoadWithRequest:request navigationType:navigationType];
-}
-*/
 
 @end
