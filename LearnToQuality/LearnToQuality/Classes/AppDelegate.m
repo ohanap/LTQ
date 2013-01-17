@@ -56,82 +56,24 @@
 /**
  * This is main kick off after the app inits, the views and Settings are setup here. (preferred - iOS4 and up)
  */
-- (BOOL) application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
-{    
-    NSURL* url = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
-    NSString* invokeString = nil;
-    
-    if (url && [url isKindOfClass:[NSURL class]]) {
-        invokeString = [url absoluteString];
-		NSLog(@"LearnToQuality launchOptions = %@", url);
-    }    
-    
+- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
+{
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
+
     self.window = [[[UIWindow alloc] initWithFrame:screenBounds] autorelease];
     self.window.autoresizesSubviews = YES;
-    
-    CGRect viewBounds = [[UIScreen mainScreen] applicationFrame];
-    
+
     self.viewController = [[[MainViewController alloc] init] autorelease];
     self.viewController.useSplashScreen = YES;
     self.viewController.wwwFolderName = @"www";
     self.viewController.startPage = @"index.html";
-    self.viewController.invokeString = invokeString;
-    self.viewController.view.frame = viewBounds;
-    
-    // check whether the current orientation is supported: if it is, keep it, rather than forcing a rotation
-    BOOL forceStartupRotation = YES;
-    UIDeviceOrientation curDevOrientation = [[UIDevice currentDevice] orientation];
-    
-    if (UIDeviceOrientationUnknown == curDevOrientation) {
-        // UIDevice isn't firing orientation notifications yet… go look at the status bar
-        curDevOrientation = (UIDeviceOrientation)[[UIApplication sharedApplication] statusBarOrientation];
-    }
-    
-    if (UIDeviceOrientationIsValidInterfaceOrientation(curDevOrientation)) {
-        for (NSNumber *orient in self.viewController.supportedOrientations) {
-            if ([orient intValue] == curDevOrientation) {
-                forceStartupRotation = NO;
-                break;
-            }
-        }
-    } 
-    
-    if (forceStartupRotation) {
-        NSLog(@"supportedOrientations: %@", self.viewController.supportedOrientations);
-        // The first item in the supportedOrientations array is the start orientation (guaranteed to be at least Portrait)
-        UIInterfaceOrientation newOrient = [[self.viewController.supportedOrientations objectAtIndex:0] intValue];
-        NSLog(@"AppDelegate forcing status bar to: %d from: %d", newOrient, curDevOrientation);
-        [[UIApplication sharedApplication] setStatusBarOrientation:newOrient];
-    }
-    
-    
-    
-    /***** Google Analytics Section *****/
-    /*  NSLog(@"Hello my friend");
-    [[GANTracker sharedTracker] startTrackerWithAccountID:kAnalyticsAccountId
-                                           dispatchPeriod:kDispatchPeriodSeconds
-                                                 delegate:self];
-    
-    NSError *error = nil;
-    if (![[GANTracker sharedTracker] setCustomVariableAtIndex:1
-                                                         name:@"phil"
-                                                        value:@"test"
-                                                    withError:&error]) {
-        NSLog(@"setCustomVariableAtIndex failed: %@", error);
-    }
-    
-    
-    if (![[GANTracker sharedTracker] trackPageview:@"/app_launched"
-                                         withError:&error]) {
-        NSLog(@"setAppLauncher failed: %@", error);
-    }
-    */
-    /***** End Google Analytics section *****/
-    
-    [self.window addSubview:self.viewController.view];
+
+    // NOTE: To customize the view's frame size (which defaults to full screen), override
+    // [self.viewController viewWillAppear:] in your view controller.
+
+    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-    
+
     return YES;
 }
 
@@ -156,6 +98,14 @@
 - (void) dealloc
 {
 	[super dealloc];
+}
+
+- (NSUInteger)application:(UIApplication*)application supportedInterfaceOrientationsForWindow:(UIWindow*)window
+{
+    // iPhone doesn't support upside down by default, while the iPad does.  Override to allow all orientations always, and let the root view controller decide what's allowed (the supported orientations mask gets intersected).
+    NSUInteger supportedInterfaceOrientations = (1 << UIInterfaceOrientationPortrait) | (1 << UIInterfaceOrientationLandscapeLeft) | (1 << UIInterfaceOrientationLandscapeRight) | (1 << UIInterfaceOrientationPortraitUpsideDown);
+
+    return supportedInterfaceOrientations;
 }
 
 @end

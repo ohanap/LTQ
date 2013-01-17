@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+        <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+        <script type="text/javascript" charset="utf-8" src="../js/childbrowser.js"></script>
+        <script type="text/javascript" charset="utf-8" src="../js/jquery-1.5.min.js"></script>
+        
+        <script>
+            
+            function storeInfo()
+            {
+               $.ajax({
+                       async:false,
+                       type: 'POST',
+                       data: 'email='+document.forms["registerForm"]["email"].value+'&lname='+document.forms["registerForm"]["lname"].value+'&fname='+document.forms["registerForm"]["fname"].value,
+                       url: 'http://learntoquality.appspot.com/guestbook.jsp',
+                       success: function(data){
+                       console.log(data);
+                       //alert('Your comment was successfully added');
+                       },
+                       error: function(){
+                       console.log(data);
+                       //alert('There was an error adding your comment');
+                       }
+                       });
+            }
+            
+            String.prototype.startsWith = function(needle)
+            {
+                return(this.indexOf(needle) == 0);
+            };
+            
+            function greeting()
+            {
+
+                for (var i = 0; i < localStorage.length; i++)
+                {
+                    if((localStorage.key(i)).startsWith("LTQ.ETF."))
+                    {
+                        localStorage.removeItem(localStorage.key(i));
+                    }
+                }
+                
+                localStorage.setItem("fname",document.forms["registerForm"]["fname"].value);
+                localStorage.setItem("lname",document.forms["registerForm"]["lname"].value);
+                localStorage.setItem("email",document.forms["registerForm"]["email"].value);
+                
+                storeInfo();
+                
+            }
+            
+        </script>
+    </head>
+    
+    <body>
+        <div id="contact">
+        
+            <div class="toolbar">
+                <div class="logo"><img src="../img/logo.png" width="141" height="23" alt="LearnToQuality" /></div> 
+                <div class="home-lnk"><a href="../index.html">home</a></div>
+            </div>
+            
+            <div class="pagecontent">               
+                
+                <div class="form-holder">
+                
+                 <h1>Register</h1>               
+                
+                    <form name="registerForm" action="../index.html" onsubmit="greeting()">
+                        <fieldset>
+                            <table>
+                                <tr>
+                                    <td><label for="name">First Name:</label></td>
+                                    <td><input type="text" id="fname" placeholder="enter first name" /></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="name">Last Name:</label></td>
+                                    <td><input type="text" id="lname" placeholder="enter last name" /></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="email">Email:</label></td>
+                                    <td><input type="email" id="email" placeholder="enter email address" required /></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><input type="submit" value="Register"/></td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </form>
+                
+                </div>
+                
+              </div>
+        </div>
+    </body>
+</html>

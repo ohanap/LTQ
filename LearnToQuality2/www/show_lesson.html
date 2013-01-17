@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+        <meta charset="utf-8">
+            
+            <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
+            <script type="text/javascript" charset="utf-8" src="js/childbrowser.js"></script>
+            <script type="text/javascript" charset="utf-8" src="js/accessReaderPlugin.js"></script>
+            <script type="text/javascript" charset="utf-8" src="js/GoogleAnalyticsPlugin.js"></script>  
+            <script type="text/javascript">
+                
+                
+                
+
+                function onBodyLoad()
+                {
+                    
+                    /*alert("hello1");
+                    var googleAnalytics = window.plugins.googleAnalyticsPlugin;
+                    googleAnalytics.startTrackerWithAccountID("UA-35775480-1");
+                    googleAnalytics.trackEvent("category", "action", "label goes here", 666);
+                    
+                    accessReaderPlugin = window.plugins.accessReaderPlugin;
+                    accessReaderPlugin.accessReader("category");
+                    alert("hello2");
+                    */
+                    
+                    document.addEventListener("deviceready", onDeviceReady, false);
+                }
+                
+                function onDeviceReady() {
+                    
+                    window.plugins.accessReaderPlugin.accessReader(sessionStorage.getItem('currentContent'));
+
+                    /*
+                    var googleAnalytics = window.plugins.googleAnalyticsPlugin;
+                    googleAnalytics.startTrackerWithAccountID("UA-35775480-1");
+                    googleAnalytics.trackEvent("category", "action", "label goes here", 666);
+                    */
+                    //accessReaderPlugin = window.plugins.accessReaderPlugin;
+                    //accessReaderPlugin.accessReader("category");
+                    
+                  /*  var googleAnalytics = window.plugins.googleAnalyticsPlugin;
+                    googleAnalytics.trackEvent("category", "action", "label goes here", 666);
+                    */
+                    /******* accessReader BEG ***********/
+                    
+                    //cb = window.plugins.childBrowser;
+                    //cb.install;
+                    
+                    /*accessReaderPlugin = window.plugins.accessReaderPlugin;
+                    accessReaderPlugin.accessReader("category");
+                    */
+                    
+                    /******* accessReader END***********/
+                    
+                    //cb = window.plugins.childBrowser;
+                    //cb.install;
+                    //cb.showWebPage(sessionStorage.getItem('currentContent'), {showAddress: false , showNavigationBar:true});
+                    
+                    /*var ref = window.open('http://www.google.com', '_blank', 'location=yes');
+                    ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+                    ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+                    ref.addEventListener('exit', function() { alert(event.type); });
+                    */
+                    
+                    //var root = this;
+                    
+                  //  cb = window.plugins.childBrowser;
+                  //  cb.install;
+                    
+                  //  if (cb != null) {
+                      //  var strPath = window.location.href;
+                        //var path = strPath.substr(0,strPath.lastIndexOf('/')) + sessionStorage.getItem('currentContent');
+                        
+                    //    alert(sessionStorage.getItem('currentContent'));
+                    //   cb.showWebPage(sessionStorage.getItem('currentContent'), {showAddress: false , showNavigationBar:true});
+                        
+                        
+                        
+                      /*  PhoneGap.addConstructor(function() {
+                                                if(!window.plugins) {
+                                                window.plugins = {};
+                                                }
+                                                
+                                                window.plugins.flurry = {
+                                                logEvent: function(name) {
+                                                return PhoneGap.exec(onEvent, onError, "ChildBrowser", "showWebPage", [sessionStorage.getItem('currentContent'), {showAddress: false , showNavigationBar:true}]);
+                                                }
+                                                }
+                                                });
+                        
+                        
+                        window.plugins.flurry.logEvent("Testing");                        
+                        */
+                        
+                        //cordova.exec("ChildBrowserCommand.showWebPage", sessionStorage.getItem('currentContent'));
+            
+                        
+                        //cb.showWebPage('www.nyt.com', { showAddress: false , showNavigationBar:true},"A little title");
+                        //cb.openExternal(path, { showAddress: false , showNavigationBar:false});
+                  //  }else{
+                    //    alert("cb is null");
+                   // }
+                }
+                
+                </script>
+            
+            <meta http-equiv="refresh" content="1;url=index.html" />
+            
+            </head>
+    
+    <body onload="onBodyLoad()">
+    </body>
+</html>
