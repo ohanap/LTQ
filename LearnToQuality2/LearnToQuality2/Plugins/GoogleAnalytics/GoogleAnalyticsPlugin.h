@@ -14,7 +14,7 @@
 #else
 #import <Cordova/CDVPlugin.h>
 #endif
-#import "GANTracker.h"
+#import "GAITracker.h"
 
 @interface GoogleAnalyticsPlugin : CDVPlugin <GANTrackerDelegate> {
 

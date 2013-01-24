@@ -38,7 +38,6 @@
 		<plugin name="Battery" value="CDVBattery"/>
 		<plugin name="Camera" value="CDVCamera"/>
 		<plugin name="Capture" value="CDVCapture"/>
-		<!--<plugin name="ChildBrowser" value="ChildBrowserCommand"/>-->
 		<plugin name="Compass" value="CDVLocation"/>
 		<plugin name="Contacts" value="CDVContacts"/>
 		<plugin name="Debug Console" value="CDVDebugConsole"/>
@@ -46,8 +45,6 @@
 		<plugin name="File" value="CDVFile"/>
 		<plugin name="FileTransfer" value="CDVFileTransfer"/>
 		<plugin name="Geolocation" value="CDVLocation"/>
-        <plugin name="FacebookConnect" value="FacebookConnect"/>
-		<plugin name="GoogleAnalyticsPlugin" value="GoogleAnalyticsPlugin"/>
         <plugin name="accessReaderPlugin" value="accessReaderPlugin"/>
 		<plugin name="Logger" value="CDVLogger"/>
 		<plugin name="Media" value="CDVSound"/>

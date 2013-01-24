@@ -87,7 +87,7 @@
 }
 */
 
-
+/*
 - (void) viewDidLoad
 {
     [super viewDidLoad];
@@ -118,6 +118,87 @@
     request.testing = NO;
     [bannerView_ loadRequest:request];
 }
+ */
+
+
+- (void) viewDidLoad
+{
+    
+    [super viewDidLoad];
+    
+    bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
+    
+    
+    // Specify the ad's "unit identifier." This is your AdMob Publisher ID.
+    bannerView_.adUnitID = MY_BANNER_UNIT_ID;
+    // Let the runtime know which UIViewController to restore after taking
+    // the user wherever the ad goes and add it to the view hierarchy.
+    bannerView_.rootViewController = self;
+    [self.view addSubview:bannerView_];
+    
+    bannerView_.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    // Initiate a generic request to load it with an ad.
+    GADRequest *request = [GADRequest request];
+    // remove this line when you are ready to deploy for real
+    request.testing = NO;
+    [bannerView_ loadRequest:request];
+
+    
+    // Constraint keeps ad at the bottom of the screen at all times.
+    [self.view addConstraint:
+     [NSLayoutConstraint constraintWithItem:bannerView_
+                                  attribute:NSLayoutAttributeBottom
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:self.view
+                                  attribute:NSLayoutAttributeBottom
+                                 multiplier:1.0
+                                   constant:0]];
+    
+    // Constraint keeps ad in the center of the screen at all times.
+    [self.view addConstraint:
+     [NSLayoutConstraint constraintWithItem:bannerView_
+                                  attribute:NSLayoutAttributeCenterX
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:self.view
+                                  attribute:NSLayoutAttributeCenterX
+                                 multiplier:1.0
+                                   constant:0]];
+    
+    /*
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+    
+    // Create a view of the standard size at the bottom of the screen.
+    // Available AdSize constants are explained in GADAdSize.h.
+    bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    CGFloat screenXPos = (screenWidth/2);
+    CGFloat screenYPos = screenHeight - kGADAdSizeBanner.size.height;
+    [bannerView_ setCenter:CGPointMake(screenXPos, screenYPos)];
+    
+    
+    // Specify the ad's "unit identifier." This is your AdMob Publisher ID.
+    bannerView_.adUnitID = MY_BANNER_UNIT_ID;
+    // Let the runtime know which UIViewController to restore after taking
+    // the user wherever the ad goes and add it to the view hierarchy.
+    bannerView_.rootViewController = self;
+    [self.view addSubview:bannerView_];
+    
+    // Initiate a generic request to load it with an ad.
+    GADRequest *request = [GADRequest request];
+    // remove this line when you are ready to deploy for real
+    request.testing = NO;
+    [bannerView_ loadRequest:request];
+  */
+    
+    
+}
+
+
 
 
 - (void) viewDidUnload

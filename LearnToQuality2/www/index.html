@@ -21,7 +21,7 @@
                     <script type="text/javascript" src="cordova-2.3.0.js"></script>
                     <script type="text/javascript" src="js/index.js"></script>
                     <!--<script type="text/javascript" src="js/FacebookConnect.js"></script>-->
-                    <script type="text/javascript" src="js/GoogleAnalyticsPlugin.js"></script>
+                    <!--<script type="text/javascript" src="js/GoogleAnalyticsPlugin.js"></script>-->
                     <script type="text/javascript" src="js/accessReaderPlugin.js"></script>
                     </head>
     <body>
@@ -32,8 +32,8 @@
             document.addEventListener('deviceready', initiateLogin , false);
             
             function initiateLogin(){
-               // window.plugins.accessReaderPlugin.accessReader("category");
-
+                // window.plugins.accessReaderPlugin.accessReader("category");
+                
                 
                 /** TODO : make sure it works fine **/
                 /******* google analytics BEG ***********/
@@ -42,17 +42,17 @@
                 //googleAnalytics.trackEvent("category", "action", "label goes here", 666);
                 /******* google analytics END***********/
                 //window.plugins.accessReaderPlugin.logReader("category");
-
+                
                 
                 
                 
                 /** Set The Login link **/
                 if (localStorage.getItem('email')==null || localStorage.getItem('email')=='' ){
                     document.body.className = 'not_connected';
-                    var googleAnalytics = window.plugins.googleAnalyticsPlugin;
-                    googleAnalytics.startTrackerWithAccountID("UA-35775480-1");
-                    googleAnalytics.trackEvent("category", "action", "label goes here", 666);
-
+                    //var googleAnalytics = window.plugins.googleAnalyticsPlugin;
+                    //googleAnalytics.startTrackerWithAccountID("UA-35775480-1");
+                    //googleAnalytics.trackEvent("category", "action", "label goes here", 666);
+                    
                 }else{
                     document.body.className = 'connected';
                 }
@@ -186,14 +186,14 @@
                     <div class="tabs">
                         <ul>
                             <!--<li id="tabHeader_1"><div class="homeBtn">Home</div></li>
-                            <li id="tabHeader_2"><div class="ProgressBtn">Progress</div></li>
-                            <li id="tabHeader_3"><div class="SettingBtn">Settings</div></li>
-                        -->
+                             <li id="tabHeader_2"><div class="ProgressBtn">Progress</div></li>
+                             <li id="tabHeader_3"><div class="SettingBtn">Settings</div></li>
+                             -->
                             <li id="tabHeader_1"><div class="homeBtn">Home</div></li>
                             <li id="tabHeader_2"><div class="ProgressBtn">Progress</div></li>
                             <li id="tabHeader_3"><div class="SettingBtn">Settings</div></li>
                             
-                             </ul>
+                        </ul>
                     </div>
                 </div>
                 <div class="tabscontent">
@@ -377,7 +377,7 @@
                                                     newChapterTD.appendChild(newLessonATD);
                                                     
                                                     
-                                                                                                    
+                                                    
                                                     
                                                     
                                                     
@@ -464,8 +464,8 @@
                             <script type="text/javascript">
                                 
                                 updateProgressBar();
-                               
-                            </script>
+                                
+                                </script>
                         </div>
                         
                         
@@ -490,11 +490,11 @@
                                     <dt>Email:</dt>
                                     <dd><script>document.write(localStorage.getItem("email"));</script></dd>
                                     
-                                </dl>                                
+                                </dl>
                             </div>
                         </div>
                         
-                        <div class="settings-reg-holder">                                                         
+                        <div class="settings-reg-holder">
                             <p class="settings-reg">
                             <a href="login/register.html" class="reg-another-lnk">Register Under Another Account</a>
                             <span class="reg-note">You will lose all your test data!</span>

@@ -16,7 +16,6 @@ GoogleAnalyticsPlugin.prototype.trackEvent = function(category,action,label,valu
 	cordova.exec("GoogleAnalyticsPlugin.trackEvent",options);
 };
 
-
 GoogleAnalyticsPlugin.prototype.setCustomVariable = function(index,name,value) {
 	var options = {index:index,
 		name:name,
