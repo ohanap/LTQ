@@ -1,0 +1,23 @@
+INDEX VERSION 1.126+/Users/philohana/Documents/MatchToQuality/Development/LTQ/Eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
+3765997747.index
+2980502125.index
+1551495745.index
+4102664040.index
+3000315013.index
+3589020104.index
+2647353031.index
+1769859069.index
+2184799505.index
+1649292543.index
+775258942.index
+684769855.index
+3747464321.index
+1495741332.index
+3245142955.index
+1574602689.index
+3544334555.index
+2909388261.index
+4138922101.index
+2232877275.index
+2638309113.index
+1226795217.index

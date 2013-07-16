@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html  style="height:800px;">
+    <head>
+        
+        
+        <style>
+            body.connected #login { display: none; }
+            body.connected #logout { display: block; }
+            body.not_connected #login { display: block; }
+            body.not_connected #logout { display: none; }
+            </style>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+            <meta charset="utf-8">
+                <link href="css/style.css" rel="stylesheet">
+                    <link rel="stylesheet" type="text/css" href="css/index.css" />
+                    <!--<link rel="stylesheet" type="text/css" href="css/plugin.css" />-->
+                    <script>
+                        </script>
+                    <script src="js\tabs.js"></script>
+                    <script type="text/javascript" src="cordova-2.3.0.js"></script>
+                    <script type="text/javascript" src="js/index.js"></script>
+                    <!--<script type="text/javascript" src="js/FacebookConnect.js"></script>-->
+                    <!--<script type="text/javascript" src="js/GoogleAnalyticsPlugin.js"></script>-->
+                    <script type="text/javascript" src="js/accessReaderPlugin.js"></script>
+                    </head>
+    <body>
+        
+        
+        <script>
+            // var APP_ID = '427184117333764';
+            document.addEventListener('deviceready', initiateLogin , false);
+            
+            function initiateLogin(){
+                // window.plugins.accessReaderPlugin.accessReader("category");
+                
+                
+                /** TODO : make sure it works fine **/
+                /******* google analytics BEG ***********/
+                //var googleAnalytics = window.plugins.googleAnalyticsPlugin;
+                //googleAnalytics.startTrackerWithAccountID("UA-35775480-1");
+                //googleAnalytics.trackEvent("category", "action", "label goes here", 666);
+                /******* google analytics END***********/
+                //window.plugins.accessReaderPlugin.logReader("category");
+                
+                
+                
+                
+                /** Set The Login link **/
+                if (localStorage.getItem('email')==null || localStorage.getItem('email')=='' ){
+                    document.body.className = 'not_connected';
+                    //var googleAnalytics = window.plugins.googleAnalyticsPlugin;
+                    //googleAnalytics.startTrackerWithAccountID("UA-35775480-1");
+                    //googleAnalytics.trackEvent("category", "action", "label goes here", 666);
+                    
+                }else{
+                    document.body.className = 'connected';
+                }
+                
+                return;
+            }
+            </script>
+        
+        <script>
+            function setContentName(contentName){
+                sessionStorage.setItem('currentContent',contentName) ;
+            }
+            
+            
+            Storage.prototype.setObject = function(key, value)
+            {
+                this.setItem(key, JSON.stringify(value));
+            }
+            
+            Storage.prototype.getObject = function(key)
+            {
+                var value = this.getItem(key);
+                return value && JSON.parse(value);
+            }
+            
+            Object.size = function(obj)
+            {
+                var size = 0, key;
+                for (key in obj) {
+                    if (obj.hasOwnProperty(key)) size++;
+                }
+                return size;
+            };
+            
+            
+            function isEmpty(obj)
+            {
+                var name;
+                for (name in obj) {
+                    if (obj.hasOwnProperty(name)) {
+                        return false;
+                    }
+                }
+                return true;
+            };
+            
+            
+            
+            
+            String.prototype.startsWith = function(needle)
+            {
+                return(this.indexOf(needle) == 0);
+            };
+            
+            function updateProgressBar()
+            {
+                var pbCanvas = document.getElementsByClassName('pbCanvas');
+                var totalScore = 0;
+                var totalChapters = pbCanvas.length;
+                var progress = 0;
+                var score = "0%";
+                
+                for (var i = [0]; i < pbCanvas.length; i++)
+                {
+                    var chapter = pbCanvas[i].id.split("_")[0];
+                    var chapterScore = document.getElementById(chapter + "_score" + i);
+                    
+                    var myArray = localStorage.getObject(chapter);
+                    var countCorrectAnswers = localStorage.getItem(chapter + "_correctAnswer");
+                    var totalQuestions = localStorage.getItem(chapter + "_Total");
+                    
+                    if(myArray != null && !isEmpty(myArray))
+                    {
+                        if(totalQuestions > 0)
+                        {
+                            var size = Object.size(myArray);
+                            progress = size/totalQuestions;
+                            var pctScore = Math.round(countCorrectAnswers/size * 100);
+                            score = pctScore + "%";
+                            totalScore = totalScore + pctScore;
+                        }
+                        else{
+                            progress = 0;
+                            score = "0%";
+                        }
+                    }
+                    else
+                    {
+                        progress = 0;
+                        score = "0%";
+                    }
+                    
+                    new BFA.ProgressBar(pbCanvas[i].id, progress, "");
+                    chapterScore.innerHTML = score;
+                }
+                
+                var classTotalScore = document.getElementById('totalScore');
+                
+                classTotalScore.innerHTML = Math.round(totalScore/totalChapters) + "%";
+            }
+            
+            function clearLocalStorage()
+            {
+                //localStorage.clear();
+                var conf = confirm("Are you sure you want to clean all the quiz progress?");
+                
+                if(conf == true)
+                {
+                    for (var i = 0; i < localStorage.length; i++)
+                    {
+                        
+                        //localStorage.getItem(localStorage.key(i));
+                        //    alert(localStorage.key(i).statsWith("LTQ.ETF."));
+                        if((localStorage.key(i)).startsWith("LTQ.ETF."))
+                        {
+                            //alert(localStorage.key(i));
+                            localStorage.removeItem(localStorage.key(i));
+                        }
+                    }
+                    
+                    updateProgressBar();
+                }
+            }
+            </script>
+        
+        <!--<a name="top"></a>-->
+        <div>
+            <div id="tabContainer">
+            	<div class="toolbar">
+               		<div class="logo"><img src="img/logo.png" width="141" height="23" alt="LearnToQuality" /></div>
+                    <div class="tabs">
+                        <ul>
+                            <!--<li id="tabHeader_1"><div class="homeBtn">Home</div></li>
+                             <li id="tabHeader_2"><div class="ProgressBtn">Progress</div></li>
+                             <li id="tabHeader_3"><div class="SettingBtn">Settings</div></li>
+                             -->
+                            <li id="tabHeader_1"><div class="homeBtn">Home</div></li>
+                            <li id="tabHeader_2"><div class="ProgressBtn">Progress</div></li>
+                            <li id="tabHeader_3"><div class="SettingBtn">Settings</div></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="tabscontent">
+                    <div class="tabpage" id="tabpage_1">
+                        <section id="container">
+                            <section id="intro">
+                                
+                                
+                                <div id="login">
+                                    <div class="toolbar">
+                                        <div class="logo"><img src="img/logo.png" width="141" height="23" alt="LearnToQuality" /></div>
+                                    </div>
+                                    
+                                    <!-- <div class="pagecontent">-->
+                                    <div class="login-back">
+                                        
+                                        <div class="login-btns-holder">
+                                            <!-- <a href="#" class="login-btn">Login</a>-->
+                                            <a href="login/register.html" class="login-btn">Register</a>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <!-- </div>
+                                     -->
+                                </div>
+                                <div id="logout">
+                                    
+                                    <div class="home-head">
+                                        <div class="welcome-head">Welcome <script>document.write(localStorage.getItem("email"));</script>
+                                        </div>
+                                        <div class="reg-another-head"><a href="login/register.html" class="reg-another-lnk">Register Under Another Account</a><span class="reg-note">You will lose all your test data!</span></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    
+                                    
+                                    <h2>Exchange Traded Funds Tutorial</h2>
+                                    
+                                    <!--<div align="center" id="login" blink style="display: none;">
+                                     <a href="login/register.html">Register </a>
+                                     </div>-->
+                                    
+                                    <div align="center">
+                                        
+                                        <div class="content-holder">
+                                            
+                                            <table cellpadding="0" cellspacing="0" border="0" id="table" class="sortable">
+                                                <thead>
+                                                    <tr>
+                                                        <th><h3>Id</h3></th>
+                                                        <th><h3>Lesson</h3></th>
+                                                        <th><h3>Quiz</h3></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>
+                                                            <a id = "LTQ.ETF.ch0" title = 'Introduction to ETFs' class = 'chapter' href="show_lesson.html" onClick="setContentName('chapter0')">Introduction to ETFs</a>
+                                                        </td>
+                                                        <td><a href="ETF0Quiz.html" class="sort-quiz">Quiz</a></td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>
+                                                            <a id = "LTQ.ETF.ch1" title = 'Investing in ETFs' class = 'chapter' href="show_lesson.html" onClick="setContentName('chapter1')">Investing in ETFs</a>
+                                                        </td>
+                                                        <td><a href="ETF1Quiz.html" class="sort-quiz">Quiz</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>
+                                                            
+                                                            <a id = "LTQ.ETF.ch2"  title = 'ETFs Valuation' class = 'chapter' href="show_lesson.html" onClick="setContentName('chapter2')">ETFs Valuation</a>
+                                                        </td>
+                                                        <td><a href="ETF2Quiz.html" class="sort-quiz">Quiz</a></td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                            
+                                        </div>
+                                        <!--<div id="controls">
+                                         <table>
+                                         <tr>
+                                         <td>
+                                         <div id="perpage">
+                                         <select onchange="sorter.size(this.value)">
+                                         <option value="5" selected="selected">5</option>
+                                         <option value="10" >10</option>
+                                         <option value="20">20</option>
+                                         <option value="50">50</option>
+                                         <option value="100">100</option>
+                                         </select>
+                                         <span>Entries Per Page</span>
+                                         </div>
+                                         </td>
+                                         <td>
+                                         <div id="navigation">
+                                         <img src="img/first.gif" width="16" height="16" alt="First Page" onclick="sorter.move(-1,true)" />
+                                         <img src="img/previous.gif" width="16" height="16" alt="First Page" onclick="sorter.move(-1)" />
+                                         <img src="img/next.gif" width="16" height="16" alt="First Page" onclick="sorter.move(1)" />
+                                         <img src="img/last.gif" width="16" height="16" alt="Last Page" onclick="sorter.move(1,true)" />
+                                         </div>
+                                         </td>
+                                         </tr>
+                                         <tr>
+                                         <td>
+                                         <div id="text">Displaying Page <span id="currentpage"></span> of <span id="pagelimit"></span></div>
+                                         </div>
+                                         </td>
+                                         </tr>
+                                         </table>
+                                         
+                                         <script type="text/javascript" src="js/script.js"></script>
+                                         <script type="text/javascript">
+                                         var sorter = new TINY.table.sorter("sorter");
+                                         sorter.head = "head";
+                                         sorter.asc = "asc";
+                                         sorter.desc = "desc";
+                                         sorter.even = "evenrow";
+                                         sorter.odd = "oddrow";
+                                         sorter.evensel = "evenselected";
+                                         sorter.oddsel = "oddselected";
+                                         sorter.paginate = true;
+                                         sorter.currentid = "currentpage";
+                                         sorter.limitid = "pagelimit";
+                                         sorter.init("table",1);
+                                         </script>
+                                         </div>-->
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                        
+                    </div>
+                    
+                    
+                    <!-- todo: build this section -->
+                    <div class="tabpage" id="tabpage_2">
+                        
+                        <!-- LB: Changed to include progress bar: ProgressBar.js-->
+                        <div id="progress">
+                            
+                            <h2>Exchange Traded Funds Tutorial
+                                <hr class="h2-sep /">
+                                <span id='totalScore' class="total-score">0%</span> total score</h2>
+                            <div class="content-holder">
+                                <div id="canvasDiv">
+                                    
+                                    <!--  Dimana: Example table view -->
+                                    
+                                    <table class='sortable pbTable' cellpadding="0" cellspacing="0" border="0">
+                                        <thead>
+                                            <tr>
+                                                <th><h3>Lesson</h3></th>
+                                                <th><h3>Progress</h3></th>
+                                                <th><h3>Score</h3></th>
+                                                <th><h3>Quiz</h3></th>
+                                            </tr>
+                                        </thead>
+                                        
+                                        <tbody id='thebody'>
+                                            <script type="text/javascript">
+                                                var chapters = document.getElementsByClassName('chapter');
+                                                var ni = document.getElementById('thebody');
+                                                
+                                                for (var i = [0]; i < chapters.length; i++)
+                                                {
+                                                    var newRow = document.createElement('tr');
+                                                    var newChapterTD = document.createElement('td');
+                                                    
+                                                    var newLessonATD = document.createElement('a');
+                                                    newLessonATD.setAttribute('id','');
+                                                    newLessonATD.setAttribute('title','');
+                                                    newLessonATD.setAttribute('class','lesson');
+                                                    newLessonATD.setAttribute('href','show_lesson.html');
+                                                    newLessonATD.setAttribute('onClick','setContentName("chapter' + i + '")');
+                                                    newLessonATD.innerHTML = chapters[i].title;;
+                                                    newChapterTD.appendChild(newLessonATD);
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    newRow.appendChild(newChapterTD);
+                                                    
+                                                    
+                                                    var newDataProgressTD = document.createElement('td');
+                                                    newDataProgressTD.setAttribute('class','progressTD');
+                                                    
+                                                    var newCanvas = document.createElement('canvas');
+                                                    var newCanvasID = chapters[i].id + "_progress" + i;
+                                                    newCanvas.setAttribute('id',newCanvasID);
+                                                    newCanvas.setAttribute('width',"100");
+                                                    newCanvas.setAttribute('height',"45");
+                                                    newCanvas.setAttribute('class',"pbCanvas");
+                                                    
+                                                    newDataProgressTD.appendChild(newCanvas);
+                                                    newRow.appendChild(newDataProgressTD);
+                                                    
+                                                    var newProgressScoreTD = document.createElement('td');
+                                                    var newSpan = document.createElement('span');
+                                                    var newSpanID = chapters[i].id + "_score" + i;
+                                                    newSpan.setAttribute('id',newSpanID);
+                                                    newSpan.setAttribute('class','progress-score');
+                                                    newProgressScoreTD.appendChild(newSpan);
+                                                    newRow.appendChild(newProgressScoreTD);
+                                                    
+                                                    var newQuizTD = document.createElement('td');
+                                                    var newQuizATD = document.createElement('a');
+                                                    newQuizATD.setAttribute('href','ETF' + i + 'Quiz.html');
+                                                    newQuizATD.setAttribute('class', 'sort-quiz');
+                                                    newQuizATD.innerHTML = 'Quiz';
+                                                    newQuizTD.appendChild(newQuizATD);
+                                                    newRow.appendChild(newQuizTD);
+                                                    
+                                                    ni.appendChild(newRow);
+                                                }
+                                                
+                                                </script>
+                                            <!--
+                                             </tbody>
+                                             
+                                             
+                                             <tbody>
+                                             <tr>
+                                             <td><a id=""  title ="" class="lesson" href="#" onClick="">Introduction to ETFs</a></td>
+                                             <td>
+                                             Progress Bar
+                                             </td>
+                                             <td><span class="progress-score">57%</span></td>
+                                             <td><a href="#" class="sort-quiz">Quiz</a></td>
+                                             
+                                             </tr>
+                                             <tr>
+                                             <td><a id=""  title ="" class="lesson" href="#" onClick="">Introduction to ETFs 1</a></td>
+                                             <td>
+                                             
+                                             <span class="progress-score">BLA</span>
+                                             </td>
+                                             <td><span class="progress-score">57%</span></td>
+                                             <td><a href="#" class="sort-quiz">Quiz</a></td>
+                                             
+                                             </tr>
+                                             <tr>
+                                             <td><a id=""  title ="" class="lesson" href="#" onClick="">Introduction to ETFs 2</a></td>
+                                             <td>
+                                             
+                                             </td>
+                                             <td><span class="progress-score">57%</span></td>
+                                             <td><a href="#" class="sort-quiz">Quiz</a></td>
+                                             
+                                             </tr>
+                                             
+                                             </tbody>
+                                             
+                                             -->
+                                            </table>
+                                    
+                                </div>
+                            </div>
+                            
+                            
+                            <script src="js/ProgressBar.js"></script>
+                            <script type="text/javascript">
+                                
+                                updateProgressBar();
+                                
+                                </script>
+                        </div>
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                    <!-- todo : build this section -->
+                    <div class="tabpage" id="tabpage_3">
+                        <h2>Tutorial Settings</h2>
+                        <div class="content-holder settings-holder">
+                        	<div class="settings-info">
+                                <dl>
+                                	<dt>First name: </dt>
+                                	<dd><script>document.write(localStorage.getItem("fname"));</script></dd>
+                                </dl>
+                               	<dl>
+                                    <dt>Last name: </dt>
+                                	<dd><script>document.write(localStorage.getItem("lname"));</script></dd>
+                                </dl>
+                                <dl>
+                                    <dt>Email:</dt>
+                                    <dd><script>document.write(localStorage.getItem("email"));</script></dd>
+                                    
+                                </dl>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-reg-holder">
+                            <p class="settings-reg">
+                            <a href="login/register.html" class="reg-another-lnk">Register Under Another Account</a>
+                            <span class="reg-note">You will lose all your test data!</span>
+                            </p>
+                        </div>
+                        
+                        <div class="settings-reg-holder">
+                            <p class="settings-reg">
+                            <a href="javascript:clearLocalStorage()" class="reg-another-lnk">Clear Quiz Progress</a>
+                            <span class="reg-note">You will lose all your quiz progress!</span>
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </body>
+</html>
