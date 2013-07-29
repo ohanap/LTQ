@@ -49,12 +49,14 @@
                 /** Set The Login link **/
                 if (localStorage.getItem('email')==null || localStorage.getItem('email')=='' ){
                     document.body.className = 'not_connected';
+                    alert('connected');
                     //var googleAnalytics = window.plugins.googleAnalyticsPlugin;
                     //googleAnalytics.startTrackerWithAccountID("UA-35775480-1");
                     //googleAnalytics.trackEvent("category", "action", "label goes here", 666);
                     
                 }else{
                     document.body.className = 'connected';
+                    alert('not connected');
                 }
                 
                 return;
