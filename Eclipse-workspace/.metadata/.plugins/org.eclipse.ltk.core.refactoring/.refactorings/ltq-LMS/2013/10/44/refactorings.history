@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;ltq-LMS/assets/www/index.html&apos; to &apos;index-ltq.html&apos;" description="Rename resource &apos;index.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/www/index.html" name="index-ltq.html" stamp="1382890370924" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;ltq-LMS/assets/www/index-moodle.html&apos; to &apos;index.html&apos;" description="Rename resource &apos;index-moodle.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/www/index-moodle.html" name="index.html" stamp="1382890384940" updateReferences="true"/>
-</session>
