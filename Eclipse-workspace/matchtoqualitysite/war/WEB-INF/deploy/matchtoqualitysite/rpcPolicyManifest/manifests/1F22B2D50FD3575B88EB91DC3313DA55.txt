@@ -1,2 +1,0 @@
-serviceClass: com.matchtoquality.client.GreetingService
-path: 605B9195AA8CAEF9B6629F6F7BAC7A69.gwt.rpc
