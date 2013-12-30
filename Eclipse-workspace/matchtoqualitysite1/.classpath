@@ -4,6 +4,10 @@
 	<classpathentry kind="src" output="test-classes" path="test"/>
 	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
 	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
+<<<<<<< HEAD
 	<classpathentry kind="var" path="JRE_LIB"/>
+=======
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+>>>>>>> bab792f0e0571e495084825c18a253e548dfda1b
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <!--<script type="text/javascript" src="../cordova-2.0.0.js"></script>-->
+        
+        <script>
+            var chapter = 'LTQ.ETF.ch1'
+            var chapterTotal = 0;
+            
+            window.onload=function() {
+                var radios = document.getElementsByClassName('answer');
+                
+                
+                
+                for (var i = [0]; i < radios.length; i++)
+                {
+                    //alert(radios[i].id);
+                    radios[i].onclick=radioClicked;
+                }
+                
+                Storage.prototype.setObject = function(key, value) {
+                    this.setItem(key, JSON.stringify(value));
+                }
+                
+                Storage.prototype.getObject = function(key) {
+                    var value = this.getItem(key);
+                    return value && JSON.parse(value);
+                }
+                
+                var  lsArray = localStorage.getObject(chapter);
+                
+                if (!isEmpty(lsArray))
+                {
+                    //alert("NOT EMPTY");
+                    var questions = document.getElementsByClassName('question-holder');
+                    //localStorage.setItem("ch1_q",questions.length);
+                    //  alert(questions.length);
+                    for(var q=[0]; q < questions.length; q++)
+                    {
+                        if(lsArray[questions[q].id] != null)
+                        {
+                            document.getElementById(lsArray[questions[q].id]).checked=true;
+                            
+                            var correctAnswer = document.getElementById(questions[q].id + "_correctAnswer").value;
+                            var selectedAnswer = document.getElementById(lsArray[questions[q].id]).value;
+                            
+                            if(selectedAnswer == correctAnswer)
+                            {
+                                document.getElementById(questions[q].id + "_" + selectedAnswer + "_mark").setAttribute('class',"correct-mark");
+                            }
+                            else
+                            {
+                                document.getElementById(questions[q].id + "_" + selectedAnswer + "_mark").setAttribute('class',"wrong-mark");
+                            }
+                        }
+                        
+                        
+                    }
+                }
+                
+                chapterTotal = localStorage.getItem(chapter + "_correctAnswer");
+                
+                if(chapterTotal == undefined)
+                {
+                    localStorage.setItem(chapter + "_correctAnswer", 0);
+                    chapterTotal = 0;
+                }
+            }
+            
+            function isEmpty(obj) {
+                var name;
+                for (name in obj) {
+                    if (obj.hasOwnProperty(name)) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            
+            function clearLocalStorage()
+            {
+                localStorage.clear();
+            }
+            
+            // alert('HERE');
+            
+            function radioClicked()
+            {
+                // alert('radioClicked: ' + this.id + " length: " + localStorage.length);
+                //alert(chapter);
+                if(localStorage.length > 0)
+                {
+                    var answers = localStorage.getObject(chapter);
+                    if(isEmpty(answers))
+                    {
+                        /// alert(chapter);
+                        var answers = {};
+                    }
+                }
+                else
+                {
+                    var answers = {};
+                }
+                
+                var numberOfQuestons = document.getElementsByClassName('question-holder');
+                localStorage.setItem(chapter + "_Total",numberOfQuestons.length);
+                
+                
+                var key = this.id.split('_')[0];
+                answers[key] = this.id;
+                localStorage.setObject(chapter, answers);
+                
+                var correctAnswer = document.getElementById(key + "_correctAnswer").value;
+                var selectedAnswer = this.value;
+                
+                if(selectedAnswer == correctAnswer)
+                {
+                    var group = document.getElementsByName(key + "Answer");
+                    
+                    for (var i = 0; i < group.length; i++)
+                    {
+                        
+                        if (group[i].checked == false)
+                        {
+                            document.getElementById(group[i].id + "_mark").className = "";
+                        }
+                        else
+                        {
+                            document.getElementById(key + "_" + selectedAnswer + "_mark").setAttribute('class',"correct-mark");
+                        }
+                        
+                    }
+                    
+                    
+                    var countCorrectAnswers = localStorage.getItem(chapter + key +  "_correctAnswer");
+                    
+                    if(countCorrectAnswers == undefined)
+                    {
+                        localStorage.setItem(chapter + key + "_correctAnswer",1);
+                        chapterTotal = new String(Number(chapterTotal) + 1);
+                    }
+                    else
+                    {
+                        countCorrectAnswers = new String(Number(countCorrectAnswers) + 1);
+                        localStorage.setItem(chapter + key + "_correctAnswer",countCorrectAnswers);
+                        chapterTotal = new String(Number(chapterTotal) + 1);
+                    }
+                    
+                    // var test = localStorage.getItem(chapter + key + "_correctAnswer");
+                    // alert(chapterTotal);
+                }
+                else
+                {
+                    
+                    var group = document.getElementsByName(key + "Answer");
+                    
+                    for (var i = 0; i < group.length; i++)
+                    {
+                        
+                        if (group[i].checked == false)
+                        {
+                            document.getElementById(group[i].id + "_mark").className = "";
+                        }
+                        else
+                        {
+                            document.getElementById(key + "_" + selectedAnswer + "_mark").setAttribute('class',"wrong-mark");
+                        }
+                        
+                    }
+                    
+                    
+                    var countCorrectAnswers = localStorage.getItem(chapter + key + "_correctAnswer");
+                    
+                    if(countCorrectAnswers == undefined)
+                    {
+                        //localStorage.setItem(chapter + key + "_correctAnswer",0);
+                    }
+                    else
+                    {
+                        countCorrectAnswers = new String(Number(countCorrectAnswers) - 1);
+                        localStorage.setItem(chapter + key + "_correctAnswer",countCorrectAnswers);
+                        chapterTotal = new String(Number(chapterTotal) - 1);
+                        localStorage.removeItem(chapter + key + "_correctAnswer");
+                    }
+                    
+                    // var test = localStorage.getItem(chapter + key + "_correctAnswer");
+                    // alert(chapterTotal);
+                    
+                }
+                
+                localStorage.setItem(chapter + "_correctAnswer",chapterTotal);
+                
+            }
+            
+            </script>
+        
+        
+        
+    </head>
+    
+    <body>
+        
+        <div id="contact">
+            
+            <div class="toolbar">
+                <div class="logo"><img src="img/logo.png" width="141" height="23" alt="LearnToQuality" /></div>
+                <div class="home-lnk"><a href="index.html">home</a></div>
+            </div>
+            
+            <div class="pagecontent">
+                
+                <h2>QUIZ 2: Investment in ETFs</h2>
+                
+                <div class="test-holder">
+                    
+                    <div class="question-holder" id='q1'>
+                        <div class="qnumber left">1.</div>
+                        <div class="qtext left">
+                            
+                            <span>Which statement about ETFs is not true?</span>
+                            <form>
+                                <input class= 'q1CA' type='hidden' name='theAnswer' id='q1_correctAnswer' value='A'/>
+                                <div class="test-radio">
+                                    <input class='answer' type="radio" name="q1Answer" id="q1_A" value="A" />
+                                    <label for = "q1_A" class="">There is a minimum of 30 day holding period for ETFs</label> <span id='q1_A_mark' class=""></span>
+                                </div>
+                                <div class="test-radio">
+                                    <input class='answer' type="radio" name="q1Answer" id="q1_B" value="B" />
+                                    <label for = "q1_B" class="">ETFs bring diversification through the high number of securities that make up the fund.</label><span id='q1_B_mark' class=""></span>
+                                </div>
+                                <div class="test-radio">
+                                    <input class='answer' type="radio" name="q1Answer" id="q1_C" value="C" />
+                                    <label for = "q1_C" class="">An ETF can be used to overweight a portfolio in US technology companies</label><span id='q1_C_mark' class=""></span>
+                                </div>
+                            </form>
+                            
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    
+                    <hr class="q-sep" />
+                    <div class="question-holder" id='q2'>
+                        <div class="qnumber left">2.</div>
+                        <div class="qtext left">
+                            
+                            <span>Which ETFs can be sold short?</span>
+                            <form>
+                                <input class= 'q2CA' type='hidden' name='theAnswer' id='q2_correctAnswer' value='C'/>
+                                <div class="test-radio">
+                                    <input class='answer' type="radio" name="q2Answer" id="q2_A" value="A" />
+                                    <label for = "q2_A" class="">Industry ETFs only.</label> <span id='q2_A_mark' class=""></span>
+                                </div>
+                                <div class="test-radio">
+                                    <input class='answer' type="radio" name="q2Answer" id="q2_B" value="B" />
+                                    <label for = "q2_B" class="">Style ETFs only</label><span id='q2_B_mark' class=""></span>
+                                </div>
+                                <div class="test-radio">
+                                    <input class='answer' type="radio" name="q2Answer" id="q2_C" value="C" />
+                                    <label for = "q2_C" class="">All types of ETFs</label><span id='q2_C_mark' class=""></span>
+                                </div>
+                            </form>
+                            
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    
+                    <hr class="q-sep" />
+                    
+                    <div class="question-holder" id='q3'>
+                        <div class="qnumber left">3.</div>
+                        <div class="qtext left">
+                            
+                            <span>In what sense can an ETF be tax efficient?</span>
+                            <form>
+                                <input class= 'q3CA' type='hidden' name='theAnswer' id='q3_correctAnswer' value='B'/>
+                                <div class="test-radio">
+                                    <input class='answer' type="radio" name="q3Answer" id="q3_A" value="A" />
+                                    <label for = "q3_A" class="">There is no capital gain tax on ETFs</label> <span id='q3_A_mark' class=""></span>
+                                </div>
+                                <div class="test-radio">
+                                    <input class='answer' type="radio" name="q3Answer" id="q3_B" value="B" />
+                                    <label for = "q3_B" class="">They provide a good tool for tax loss harvesting</label><span id='q3_B_mark' class=""></span>
+                                </div>
+                                <div class="test-radio">
+                                    <input class='answer' type="radio" name="q3Answer" id="q3_C" value="C" />
+                                    <label for = "q3_C" class="">There is no tax on geography ETFs</label><span id='q3_C_mark' class=""></span>
+                                </div>
+                            </form>
+                            
+                        </div>
+                        <div>
+                            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    
+                    <!-- <div class="q-button-holder">
+                     <a href="#" class="left qbtn">Save & Exit</a>
+                     <a href="#" class="right qbtn">Save & Continue</a>
+                     </div>-->
+                    
+                </div>
+            </div>
+            </body>
+</html>

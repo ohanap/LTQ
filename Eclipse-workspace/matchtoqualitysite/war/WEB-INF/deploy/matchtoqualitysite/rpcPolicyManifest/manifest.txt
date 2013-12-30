@@ -1,0 +1,3 @@
+# Module matchtoqualitysite
+# RPC service class, partial path of RPC policy file
+com.matchtoquality.client.GreetingService, 605B9195AA8CAEF9B6629F6F7BAC7A69.gwt.rpc

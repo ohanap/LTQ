@@ -286,6 +286,7 @@ Compiling...
    Compilation completed in 0.00 seconds
 Removing invalidated units
 Finding entry point classes
+<<<<<<< HEAD
 Public resources found in...
 Translatable source found in...
 Found 0 cached/archived units.  Used 0 / 2719 units from cache.
@@ -990,3 +991,5 @@ Compiling...
    Compilation completed in 0.00 seconds
 Removing invalidated units
 Finding entry point classes
+=======
+>>>>>>> bab792f0e0571e495084825c18a253e548dfda1b

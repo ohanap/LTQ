@@ -40,6 +40,7 @@ gwt-*
 # generated files
 bin/
 gen/
+.gwt-log
 # Ignore gradle files
 .gradle/
 build/
