@@ -1,5 +1,0 @@
-INDEX VERSION 1.122+/Users/philohana/Documents/MatchToQuality/Development/LTQ/Eclipse-workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-1254057651.index
-3372328910.index
-1063062364.index
-356747384.index
