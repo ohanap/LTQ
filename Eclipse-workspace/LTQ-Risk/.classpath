@@ -6,6 +6,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="src" path="libs"/>
-	<classpathentry kind="lib" path="/Users/philohana/Documents/MatchToQuality/Development/LTQ/Eclipse-workspace/ltq/libs/cordova-2.9.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/philohana/Documents/MatchToQuality/Development/LTQ/Eclipse-workspace/ltq/libs/cordova-2.9.0.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
