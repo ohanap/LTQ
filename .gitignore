@@ -1,7 +1,8 @@
 # folders #
 ###########
 Eclipse-workspace/.metadata/
-Eclipse-workspace/matchtoqualitysite1/gwt*/
+Eclipse-workspace/matchtoqualitysite1/gwt-unitCache/
+gwt-unitCache-*
 # Compiled source #
 ###################
 *.class
