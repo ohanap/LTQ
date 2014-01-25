@@ -1,0 +1,291 @@
+@charset "utf-8";
+/* CSS Document */
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+body {
+font-family: Arial !important;
+font-size: 14px !important;
+line-height: 1.385em !important;
+}
+#wrap {
+min-height: 100%;
+height: auto;
+margin: 0 auto -120px;
+padding: 0 0 180px;
+background: url(../img/body-bg.png) repeat-x bottom;
+}
+#footer {
+height: 120px;
+}
+.content-holder {
+	background:url(../img/content-bg.png) repeat-x top;
+	border-top: 1px solid #fff;
+}
+.top-graphic {
+	background: url(../img/top-graphic.png) no-repeat top left;
+}
+.bottom-graphic {
+	background: url(../img/top-graphic.png) no-repeat bottom right;
+}
+/*Top bar*/
+.header {
+  background-color: #004ca9;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#001748), to(#004ca9));
+  background: -webkit-linear-gradient(top, #001748, #004ca9);
+  background: -moz-linear-gradient(top, #001748, #004ca9);
+  background: -ms-linear-gradient(top, #001748, #004ca9);
+  background: -o-linear-gradient(top, #001748, #004ca9);
+  height: 80px;
+  border-bottom: 1px solid #00337e;
+}
+.logo-lnk {
+	display: block;
+	max-width: 300px;
+	float: left;
+}
+.top-navbar a, .top-navbar span {
+	color: #fff !important;
+	font-size: 1.154em;	
+	padding: 30px 15px 10px 15px !important;
+}
+.top-navbar span {
+	display: block;
+}
+.top-navbar a:hover {
+	text-decoration: underline !important;
+	background: none !important;
+}
+button.navbar-toggle {
+	outline: none !important;;
+}
+.icon-bar {
+	display: block;
+	width: 34px !important;
+	height: 28px !important;
+	margin: 10px 0 0 0;
+	outline: none;
+}
+.icon-bar img {
+	width: 32px;
+	height: 26px;
+}
+.navbar-collapse.in {
+  background-color: #004ca9;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#001748), to(#004ca9));
+  background: -webkit-linear-gradient(top, #001748, #004ca9);
+  background: -moz-linear-gradient(top, #001748, #004ca9);
+  background: -ms-linear-gradient(top, #001748, #004ca9);
+  background: -o-linear-gradient(top, #001748, #004ca9);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  z-index: 100000;
+  width: 280px;
+  float: right;
+}
+.navbar-collapse.in ul {
+	float: right;
+}
+.navbar-collapse.in ul > li {
+	display: inline-block;
+	z-index: 100000;
+}
+.navbar-collapse.in .navbar-nav {
+	margin: 0 !important;	
+} 
+.navbar-collapse.in .top-navbar a, .navbar-collapse.in .top-navbar span {
+padding: 10px 15px 10px 15px !important;
+}
+/*Main Navigation*/
+@media (min-width: 1200px) {
+.main-nav, .inner-holder {
+	width: 85%;
+	margin: 0 auto;
+}
+}
+.main-nav > li {
+	width: auto !important;
+	padding: 20px 0 10px 0;
+}
+.main-nav  a {
+	font-size: 1.462em;
+	text-decoration: underline;
+	padding: 10px 20px !important;
+}
+.main-nav  a:hover {
+	text-decoration: none;
+	background: none !important;
+}
+.current {
+  background-color: #004ca9;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#001748), to(#004ca9));
+  background: -webkit-linear-gradient(top, #001748, #004ca9);
+  background: -moz-linear-gradient(top, #001748, #004ca9);
+  background: -ms-linear-gradient(top, #001748, #004ca9);
+  background: -o-linear-gradient(top, #001748, #004ca9);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none !important;  
+}
+@media (max-width: 768px) {
+	
+.main-nav {
+	margin: 25px 0 0 0;
+}
+	.main-nav > li {
+	width: auto !important;
+	padding: 0;
+}
+.main-nav  a {
+	padding: 13px 20px !important;
+}
+}
+/*footer*/
+.footer {
+  background-color: #1a1a1a;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a1a1a), to(#4d4d4d));
+  background: -webkit-linear-gradient(top, #1a1a1a, #4d4d4d);
+  background: -moz-linear-gradient(top, #1a1a1a, #4d4d4d);
+  background: -ms-linear-gradient(top, #1a1a1a, #4d4d4d);
+  background: -o-linear-gradient(top, #1a1a1a, #4d4d4d);
+  border-top: 1px solid #fff;
+  padding: 10px 0 0 0;
+}
+.footer p {
+	color: #e6e6e6;
+	padding: 10px 0 0 0;
+	margin: 0;
+}
+.footer a {
+	color: #fff;
+	text-decoration: underline;
+}
+.footer a:hover {
+	text-decoration: none;
+}
+/*Typography*/
+h1, .h1 {
+font-size: 2.462em !important;
+color:#75a726;
+}
+.lead {
+	font-size: 1.462em !important;
+	margin: 20px 0 !important;
+}
+h3 {
+margin-top: 15px !important;
+margin-bottom: 15px !important;
+color:#75a726;
+font-size: 1.462em;
+}
+h5 {
+	font-size: 1.154em;
+	font-weight: bold;
+}
+/*Content*/
+.home-example {
+	padding: 0 0 0 15%;
+	position: relative;
+}
+.stores {
+	position: absolute;
+	bottom: 20px;
+	padding: 0 20px;
+}
+@media (max-width: 768px) {
+	.home-example {
+		padding: 0 0 0 5%;
+		}
+	.stores {padding: 0;}
+}
+.examples-row {
+	margin: 0 0 30px 0;
+}
+.example-num {
+	width: 32px;
+	height: 32px;
+  background-color: #fbb03b;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fbb03b), to(#fcee21));
+  background: -webkit-linear-gradient(top, #fbb03ba, #fcee21);
+  background: -moz-linear-gradient(top, #fbb03b, #fcee21);
+  background: -ms-linear-gradient(top, #fbb03b, #fcee21);
+  background: -o-linear-gradient(top, #fbb03b, #fcee21);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 8px #888888;
+  margin: 15px -13px 0 0;
+  text-align: center;
+  line-height: 32px;
+  color: #001748;
+  font-weight: bold;
+  font-size: 1.308em;
+  
+}
+@media (min-width: 1200px) {
+.what-example {
+	padding: 0 0 0 30%;
+}
+.examples-row {
+	padding: 0 10%;
+}
+}
+.courses-section {
+	padding: 30px 0 0 0;
+}
+.courses-table th {
+  background-color: #ccc;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ccc), to(#f2f2f2));
+  background: -webkit-linear-gradient(top, #ccc, #f2f2f2);
+  background: -moz-linear-gradient(top, #ccc, #f2f2f2);
+  background: -ms-linear-gradient(top, #ccc, #f2f2f2);
+  background: -o-linear-gradient(top, #ccc, #f2f2f2);
+  font-size: 1.154em;
+}
+.courses-table td {
+	background: #f2f2f2;
+}
+.courses-icon {
+	width: 16px;
+	height: 16px;
+}
+.forum-row {
+	margin: 10px 0 15px 0;
+}
+.forum-row h4 {
+	padding-top: 0;
+	margin-top: 0;
+}
+.contact-form {
+	padding: 30px 0 0 0;
+}
+.contact-form label {
+	font-weight: normal;
+}
+.btn-custom {
+  background-color: #00337e;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0093d8), to(#00337e));
+  background: -webkit-linear-gradient(top, #0093d8, #00337e);
+  background: -moz-linear-gradient(top, #0093d8, #00337e);
+  background: -ms-linear-gradient(top, #0093d8, #00337e);
+  background: -o-linear-gradient(top, #0093d8, #00337e);
+  font-size: 1.154em;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #ccc;
+}
+.btn-custom:hover {
+  background-color: #00337e;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#00337e), to(#0093d8));
+  background: -webkit-linear-gradient(top, #00337e, #0093d8);
+  background: -moz-linear-gradient(top, #00337e, #0093d8);
+  background: -ms-linear-gradient(top, #00337e, #0093d8);
+  background: -o-linear-gradient(top, #00337e, #0093d8);
+  color: #fff;
+}

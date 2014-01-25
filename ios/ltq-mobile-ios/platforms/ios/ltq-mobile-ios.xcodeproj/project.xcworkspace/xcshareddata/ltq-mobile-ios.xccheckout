@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7C5C9ADA-F7A3-48AE-ADEF-BEB4706A8408</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ltq-mobile-ios</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4EBFC489-5B06-45F3-8C7A-5D4C92242C87</key>
+		<string>git://github.com/moodlehq/moodlemobile.git</string>
+		<key>F9BBE918-DFA6-40F0-9FA1-87B4B414BC02</key>
+		<string>https://github.com/ohanap/LTQ.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios/ltq-mobile-ios/platforms/ios/ltq-mobile-ios.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4EBFC489-5B06-45F3-8C7A-5D4C92242C87</key>
+		<string>../../www</string>
+		<key>F9BBE918-DFA6-40F0-9FA1-87B4B414BC02</key>
+		<string>../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ohanap/LTQ.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F9BBE918-DFA6-40F0-9FA1-87B4B414BC02</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F9BBE918-DFA6-40F0-9FA1-87B4B414BC02</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LTQ</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4EBFC489-5B06-45F3-8C7A-5D4C92242C87</string>
+			<key>IDESourceControlWCCName</key>
+			<string>www</string>
+		</dict>
+	</array>
+</dict>
+</plist>

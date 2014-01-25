@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry excluding="src/|gen/|assets/www/|assets/www/css/|assets/www/css/fonts/|assets/www/emulator/|assets/www/externallib/|assets/www/img/|assets/www/img/files/|assets/www/img/icon/android/|assets/www/img/icon/ios/|assets/www/img/mod/|assets/www/img/splash/android/|assets/www/img/splash/ios/|assets/www/lang/|assets/www/lib/|assets/www/plugins/addcontact/|assets/www/plugins/addnote/|assets/www/plugins/contents/|assets/www/plugins/notifications/|assets/www/plugins/participants/|assets/www/plugins/sendmessage/|assets/www/plugins/upload/|assets/www/tests/|assets/www/tests/lib/|assets/www/tests/spec/lib/|bin/|bin/res/|cordova/|cordova/lib/|cordova/node_modules/q/|cordova/node_modules/q/benchmark/|cordova/node_modules/shelljs/|cordova/node_modules/shelljs/bin/|cordova/node_modules/shelljs/scripts/|cordova/node_modules/shelljs/src/|CordovaLib/|CordovaLib/assets/|CordovaLib/bin/|CordovaLib/bin/classes/com/squareup/okhttp/internal/http/|CordovaLib/bin/classes/com/squareup/okhttp/internal/spdy/|CordovaLib/bin/classes/org/apache/cordova/|CordovaLib/bin/res/|CordovaLib/gen/org/apache/cordova/|CordovaLib/libs/|CordovaLib/res/|CordovaLib/res/layout/|CordovaLib/res/values/|CordovaLib/src/com/squareup/okhttp/|CordovaLib/src/com/squareup/okhttp/internal/|CordovaLib/src/com/squareup/okhttp/internal/http/|CordovaLib/src/com/squareup/okhttp/internal/spdy/|CordovaLib/src/org/apache/cordova/|libs/|org/apache/cordova/|platform_www/|res/|res/drawable/|res/layout/|res/values/|res/xml/|temporary_delete/" kind="src" path=""/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ltqappmobile-CordovaLib"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

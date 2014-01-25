@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+           id="org.apache.cordova.core.contacts"
+      version="0.1.0">
+    <name>Contacts</name>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Contacts">
+                <param name="android-package" value="org.apache.cordova.core.ContactManager"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+
+        <source-file src="src/edu/self/EchoPlugin.java" target-dir="src/org/apache/cordova/core" />
+        <source-file src="src/com/phonegap/hello_world/HelloWorld.java" target-dir="src/org/apache/cordova/core" />
+        <source-file src="src/org/apache/cordova/camera/CameraLauncher.java" target-dir="src/org/apache/cordova/core" />
+    </platform>
+</plugin>

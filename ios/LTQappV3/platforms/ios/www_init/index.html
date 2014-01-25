@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title>InAppBrowser.addEventListener Example</title>
+        
+        
+        
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        
+        <script type="text/javascript" charset="utf-8" src="jquery.js"></script>
+        
+        <script type="text/javascript" charset="utf-8">
+            
+            
+            
+            // Wait for device API libraries to load
+            
+            //
+            
+            document.addEventListener("deviceready", onDeviceReady, false);
+            
+            
+            
+            // device APIs are available
+            
+            //
+            
+            function onDeviceReady() {
+                
+                
+                
+                
+                
+                //     alert("PHIL");
+                
+                
+                
+                console.log("PHIL TEST");
+                
+                window.open('http://www.google.com', '_blank', 'location=yes');
+                
+                //        alert("PHIL");
+                
+                //        alert("phil2");
+                
+                //ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+                
+                //ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+                
+                //ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+                
+                //ref.addEventListener('exit', function(event) { alert(event.type); });
+                
+                
+                
+                
+                
+                /*
+                 
+                 console.log("at least something works");
+                 
+                 $("#btn").click(function(){
+                 
+                 alert("right bef");
+                 
+                 var ref = window.open('http://apache.org', '_blank', 'location=yes');
+                 
+                 ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+                 
+                 ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+                 
+                 ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+                 
+                 ref.addEventListener('exit', function(event) { alert(event.type); });
+                 
+                 });
+                 
+                 
+                 
+                 alert("right aft");*/
+                
+            }
+        
+        
+        
+            </script>
+        
+    </head>
+    
+    <body>
+        
+        <button id="btn">trigger</button>
+        
+    </body>
+    
+</html>

@@ -19,6 +19,7 @@
 
 package com.phonegap.helloworld;
 
+import android.app.Activity;
 import android.os.Bundle;
 import org.apache.cordova.*;
 
