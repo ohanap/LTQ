@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CBD0245A-40AF-4F1F-A95C-99A14D5203FA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LTQappV3</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EAB30C61-C599-42BD-A3AB-630D36DF8F36</key>
+		<string>https://github.com/ohanap/LTQ.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios/LTQappV3/platforms/ios/LTQappV3.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EAB30C61-C599-42BD-A3AB-630D36DF8F36</key>
+		<string>../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ohanap/LTQ.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EAB30C61-C599-42BD-A3AB-630D36DF8F36</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EAB30C61-C599-42BD-A3AB-630D36DF8F36</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LTQ</string>
+		</dict>
+	</array>
+</dict>
+</plist>

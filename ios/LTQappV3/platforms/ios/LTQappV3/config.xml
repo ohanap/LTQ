@@ -76,9 +76,6 @@
     <feature name="Vibration">
         <param name="ios-package" value="CDVVibration" />
     </feature>
-    <feature name="CDVPDFViewer">
-        <param name="ios-package" value="CDVPDFViewer"/>
-    </feature>
     <name>LTQappV3</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
