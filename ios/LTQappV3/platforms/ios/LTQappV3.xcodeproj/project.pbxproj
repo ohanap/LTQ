@@ -131,6 +131,8 @@
 		CC4C92B11890D256008F0D45 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4C92B01890D256008F0D45 /* MessageUI.framework */; };
 		CC4C92B31890D447008F0D45 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4C92B21890D447008F0D45 /* QuartzCore.framework */; };
 		CC4C92B51890D620008F0D45 /* index_good in Resources */ = {isa = PBXBuildFile; fileRef = CC4C92B41890D620008F0D45 /* index_good */; };
+		CCBF515F189DFFD20066BFB2 /* File in Resources */ = {isa = PBXBuildFile; fileRef = CCBF515E189DFFD20066BFB2 /* File */; };
+		CCBF516118A09A9F0066BFB2 /* ws.html in Resources */ = {isa = PBXBuildFile; fileRef = CCBF516018A09A9F0066BFB2 /* ws.html */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		D911B5EDC7E54F3FA55F5454 /* CDVKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 30993DC8786142018052454F /* CDVKeyboard.m */; };
 		E654157BB8704158A1BD85B7 /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 229BC5C575FC4F0983B97524 /* CDVLocation.m */; };
@@ -333,6 +335,8 @@
 		CC4C92B01890D256008F0D45 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		CC4C92B21890D447008F0D45 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CC4C92B41890D620008F0D45 /* index_good */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = index_good; path = www/index_good; sourceTree = "<group>"; };
+		CCBF515E189DFFD20066BFB2 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		CCBF516018A09A9F0066BFB2 /* ws.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ws.html; sourceTree = "<group>"; };
 		CE1A7D7B3C1649C093AFFDE4 /* AddressBookUI.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		D3D03A3E912948038DEC2507 /* CDVFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVFile.m; path = org.apache.cordova.file/CDVFile.m; sourceTree = "<group>"; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
@@ -412,6 +416,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				CCBF516018A09A9F0066BFB2 /* ws.html */,
+				CCBF515E189DFFD20066BFB2 /* File */,
 				CC4C92B41890D620008F0D45 /* index_good */,
 				F840E1F0165FE0F500CFE078 /* config.xml */,
 				301BF56E109A69640062928A /* www */,
@@ -789,6 +795,7 @@
 				CC4C92891890D0D1008F0D45 /* Reader-Email@2x.png in Resources */,
 				CC4C92811890D0D1008F0D45 /* ipadportraitview.png in Resources */,
 				CC4C92871890D0D1008F0D45 /* Reader-Button-N@2x.png in Resources */,
+				CCBF515F189DFFD20066BFB2 /* File in Resources */,
 				3088BBBD154F3926009F9C59 /* Default-Landscape@2x~ipad.png in Resources */,
 				CC4C928D1890D0D1008F0D45 /* Reader-Mark-Y@2x.png in Resources */,
 				CC4C92771890D0D1008F0D45 /* CopyJSToWWW2.png in Resources */,
@@ -822,6 +829,7 @@
 				CC4C927C1890D0D1008F0D45 /* ipadlandscapeview.png in Resources */,
 				30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */,
 				CC4C92861890D0D1008F0D45 /* Reader-Button-N.png in Resources */,
+				CCBF516118A09A9F0066BFB2 /* ws.html in Resources */,
 				CC4C92AE1890D0D1008F0D45 /* viewportrait.png in Resources */,
 				3ABF3A3277064DBFB7DE1FD9 /* CDVNotification.bundle in Resources */,
 				E89BCA6A05544CD5B8BBE692 /* CDVCapture.bundle in Resources */,

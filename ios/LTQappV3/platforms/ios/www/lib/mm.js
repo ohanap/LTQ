@@ -1770,6 +1770,8 @@ anchor      (\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(
                         );
                     } catch(e) {
                         MM.log('Launching childBrowser failed!, opening as standard link');
+                        console.log("PHIL007:" + link.slice(0, -4));
+
                         window.open(link, '_blank');
                     }
                 } else {
@@ -1783,9 +1785,9 @@ anchor      (\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(
             } else {
                 // Changing _blank for _system may work in cordova 2.4 and onwards
                 MM.log('Open external file using window.open 2');
-                //console.log("PHIL:" + link);
-                //cordova.exec(null, null, 'CDVPDFViewer', 'showPDF',[link]);
-                window.open(link, '_blank','location=no');
+                console.log("PHIL3:" + link);
+                cordova.exec(null, null, 'CDVPDFViewer', 'showPDF',[link]);
+                //window.open(link, '_blank','location=no');
             }
         }
         if (typeof(MM.plugins.contents.infoBox) != "undefined") {

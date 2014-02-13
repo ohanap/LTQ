@@ -1,0 +1,453 @@
+<form autocomplete="off" action="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/user/editadvanced.php" method="post" accept-charset="utf-8" id="mform1" class="mform" onsubmit="try { var myValidator = validate_user_editadvanced_form; } catch(e) { return true; } return myValidator(this);">
+	<div style="display: none;"><input name="id" type="hidden" value="-1" />
+<input name="course" type="hidden" value="1" />
+<input name="sesskey" type="hidden" value="AGCcSkvBJH" />
+<input name="_qf__user_editadvanced_form" type="hidden" value="1" />
+<input name="mform_isexpanded_id_moodle" type="hidden" value="1" />
+<input name="mform_isexpanded_id_moodle_picture" type="hidden" value="0" />
+<input name="mform_isexpanded_id_moodle_additional_names" type="hidden" value="0" />
+<input name="mform_isexpanded_id_moodle_interests" type="hidden" value="0" />
+<input name="mform_isexpanded_id_moodle_optional" type="hidden" value="0" />
+</div>
+
+	<div class="collapsible-actions"><span class="collapseexpand">Expand all</span></div>
+
+	<fieldset class="clearfix collapsible"  id="id_moodle" aria-live="polite">
+		<legend class="ftoggler">General</legend>
+		<div class="fcontainer clearfix">
+		
+		<div id="fitem_id_username" class="fitem required fitem_ftext"><div class="fitemtitle"><label for="id_username">Username<img class="req" title="Required field" alt="Required field" src="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/theme/image.php/magazine/core/1375935713/req" /> </label></div><div class="felement ftext"><input size="20" name="username" type="text" onblur="validate_user_editadvanced_form_username(this)" onchange="validate_user_editadvanced_form_username(this)" id="id_username" /></div></div>
+		<div id="fitem_id_auth" class="fitem fitem_fselectgroups"><div class="fitemtitle"><label for="id_auth">Choose an authentication method<span class="helptooltip"><a href="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/help.php?component=auth&amp;identifier=chooseauthmethod&amp;lang=en" title="Help with Choose an authentication method" aria-haspopup="true" target="_blank"><img src="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/theme/image.php/magazine/core/1375935713/help" alt="Help with Choose an authentication method" class="iconhelp" /></a></span> </label></div><div class="felement fselectgroups"><select name="auth" id="id_auth">
+	<optgroup label="Enabled">		<option value="email">Email-based self-registration</option>
+		<option value="manual" selected="selected">Manual accounts</option>
+		<option value="nologin">No login</option>
+	</optgroup>
+	<optgroup label="Disabled">		<option value="cas">CAS server (SSO)</option>
+		<option value="db">External database</option>
+		<option value="fc">FirstClass server</option>
+		<option value="imap">IMAP server</option>
+		<option value="ldap">LDAP server</option>
+		<option value="mnet">MNet authentication</option>
+		<option value="nntp">NNTP server</option>
+		<option value="none">No authentication</option>
+		<option value="pam">PAM (Pluggable Authentication Modules)</option>
+		<option value="pop3">POP3 server</option>
+		<option value="radius">RADIUS server</option>
+		<option value="shibboleth">Shibboleth</option>
+		<option value="webservice">Web services authentication</option>
+	</optgroup>
+</select></div></div>
+		<div id="fitem_id_suspended" class="fitem fitem_fcheckbox"><div class="fitemtitle"><label for="id_suspended">Suspended account<span class="helptooltip"><a href="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/help.php?component=auth&amp;identifier=suspended&amp;lang=en" title="Help with Suspended account" aria-haspopup="true" target="_blank"><img src="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/theme/image.php/magazine/core/1375935713/help" alt="Help with Suspended account" class="iconhelp" /></a></span> </label></div><div class="felement fcheckbox"><span><input type="hidden" name="suspended" value="0" /><input name="suspended" type="checkbox" value="1" id="id_suspended" /></span></div></div>
+		<div id="fitem_id_createpassword" class="fitem fitem_fcheckbox"><div class="fitemtitle"><label for="id_createpassword">Generate password and notify user </label></div><div class="felement fcheckbox"><span><input name="createpassword" type="checkbox" value="1" id="id_createpassword" /></span></div></div>
+		<div class="fitem"><div class="fitemtitle"><div class="fstaticlabel"><label> </label></div></div><div class="felement fstatic">The password must have at least 8 characters, at least 1 digit(s), at least 1 lower case letter(s), at least 1 upper case letter(s), at least 1 non-alphanumeric character(s)&nbsp;</div></div>
+		<div id="fitem_id_newpassword" class="fitem fitem_fpassword"><div class="fitemtitle"><label for="id_newpassword">New password<span class="helptooltip"><a href="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/help.php?component=moodle&amp;identifier=newpassword&amp;lang=en" title="Help with New password" aria-haspopup="true" target="_blank"><img src="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/theme/image.php/magazine/core/1375935713/help" alt="Help with New password" class="iconhelp" /></a></span> </label></div><div class="felement fpassword"><input size="20" autocomplete="off" name="newpassword" type="password" id="id_newpassword" /></div></div>
+		<div id="fitem_id_preference_auth_forcepasswordchange" class="fitem fitem_fcheckbox"><div class="fitemtitle"><label for="id_preference_auth_forcepasswordchange">Force password change<span class="helptooltip"><a href="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/help.php?component=moodle&amp;identifier=forcepasswordchange&amp;lang=en" title="Help with Force password change" aria-haspopup="true" target="_blank"><img src="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/theme/image.php/magazine/core/1375935713/help" alt="Help with Force password change" class="iconhelp" /></a></span> </label></div><div class="felement fcheckbox"><span><input type="hidden" name="preference_auth_forcepasswordchange" value="0" /><input name="preference_auth_forcepasswordchange" type="checkbox" value="1" id="id_preference_auth_forcepasswordchange" /></span></div></div>
+		<div id="fitem_id_firstname" class="fitem required fitem_ftext"><div class="fitemtitle"><label for="id_firstname">First name<img class="req" title="Required field" alt="Required field" src="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/theme/image.php/magazine/core/1375935713/req" /> </label></div><div class="felement ftext"><input maxlength="100" size="30" name="firstname" type="text" onblur="validate_user_editadvanced_form_firstname(this)" onchange="validate_user_editadvanced_form_firstname(this)" id="id_firstname" /></div></div>
+		<div id="fitem_id_lastname" class="fitem required fitem_ftext"><div class="fitemtitle"><label for="id_lastname">Surname<img class="req" title="Required field" alt="Required field" src="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/theme/image.php/magazine/core/1375935713/req" /> </label></div><div class="felement ftext"><input maxlength="100" size="30" name="lastname" type="text" onblur="validate_user_editadvanced_form_lastname(this)" onchange="validate_user_editadvanced_form_lastname(this)" id="id_lastname" /></div></div>
+		<div id="fitem_id_email" class="fitem required fitem_ftext"><div class="fitemtitle"><label for="id_email">Email address<img class="req" title="Required field" alt="Required field" src="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/theme/image.php/magazine/core/1375935713/req" /> </label></div><div class="felement ftext"><input maxlength="100" size="30" name="email" type="text" onblur="validate_user_editadvanced_form_email(this)" onchange="validate_user_editadvanced_form_email(this)" id="id_email" /></div></div>
+		<div id="fitem_id_maildisplay" class="fitem fitem_fselect"><div class="fitemtitle"><label for="id_maildisplay">Email display </label></div><div class="felement fselect"><select name="maildisplay" id="id_maildisplay">
+	<option value="0">Hide my email address from everyone</option>
+	<option value="1">Allow everyone to see my email address</option>
+	<option value="2" selected="selected">Allow only other course members to see my email address</option>
+</select></div></div>
+		<div id="fitem_id_mailformat" class="fitem fitem_fselect"><div class="fitemtitle"><label for="id_mailformat">Email format </label></div><div class="felement fselect"><select name="mailformat" id="id_mailformat">
+	<option value="0">Plain text format</option>
+	<option value="1" selected="selected">Pretty HTML format</option>
+</select></div></div>
+		<div id="fitem_id_maildigest" class="fitem fitem_fselect"><div class="fitemtitle"><label for="id_maildigest">Email digest type </label></div><div class="felement fselect"><select name="maildigest" id="id_maildigest">
+	<option value="0" selected="selected">No digest (single email per forum post)</option>
+	<option value="1">Complete (daily email with full posts)</option>
+	<option value="2">Subjects (daily email with subjects only)</option>
+</select></div></div>
+		<div id="fitem_id_autosubscribe" class="fitem fitem_fselect"><div class="fitemtitle"><label for="id_autosubscribe">Forum auto-subscribe </label></div><div class="felement fselect"><select name="autosubscribe" id="id_autosubscribe">
+	<option value="1" selected="selected">Yes: when I post, subscribe me to that forum</option>
+	<option value="0">No: don't automatically subscribe me to forums</option>
+</select></div></div>
+		<div id="fitem_id_trackforums" class="fitem fitem_fselect"><div class="fitemtitle"><label for="id_trackforums">Forum tracking </label></div><div class="felement fselect"><select name="trackforums" id="id_trackforums">
+	<option value="0" selected="selected">No: don't keep track of posts I have seen</option>
+	<option value="1">Yes: highlight new posts for me</option>
+</select></div></div>
+		<div id="fitem_id_htmleditor" class="fitem fitem_fselect"><div class="fitemtitle"><label for="id_htmleditor">When editing text </label></div><div class="felement fselect"><select name="htmleditor" id="id_htmleditor">
+	<option value="0">Use standard web forms</option>
+	<option value="1" selected="selected">Use HTML editor</option>
+</select></div></div>
+		<div id="fitem_id_city" class="fitem fitem_ftext"><div class="fitemtitle"><label for="id_city">City/town </label></div><div class="felement ftext"><input maxlength="120" size="21" name="city" type="text" id="id_city" /></div></div>
+		<div id="fitem_id_country" class="fitem fitem_fselect"><div class="fitemtitle"><label for="id_country">Select a country </label></div><div class="felement fselect"><select name="country" id="id_country">
+	<option value="">Select a country...</option>
+	<option value="AF">Afghanistan</option>
+	<option value="AX">Åland Islands</option>
+	<option value="AL">Albania</option>
+	<option value="DZ">Algeria</option>
+	<option value="AS">American Samoa</option>
+	<option value="AD">Andorra</option>
+	<option value="AO">Angola</option>
+	<option value="AI">Anguilla</option>
+	<option value="AQ">Antarctica</option>
+	<option value="AG">Antigua And Barbuda</option>
+	<option value="AR">Argentina</option>
+	<option value="AM">Armenia</option>
+	<option value="AW">Aruba</option>
+	<option value="AU">Australia</option>
+	<option value="AT">Austria</option>
+	<option value="AZ">Azerbaijan</option>
+	<option value="BS">Bahamas</option>
+	<option value="BH">Bahrain</option>
+	<option value="BD">Bangladesh</option>
+	<option value="BB">Barbados</option>
+	<option value="BY">Belarus</option>
+	<option value="BE">Belgium</option>
+	<option value="BZ">Belize</option>
+	<option value="BJ">Benin</option>
+	<option value="BM">Bermuda</option>
+	<option value="BT">Bhutan</option>
+	<option value="BO">Bolivia, Plurinational State Of</option>
+	<option value="BQ">Bonaire, Sint Eustatius And Saba</option>
+	<option value="BA">Bosnia And Herzegovina</option>
+	<option value="BW">Botswana</option>
+	<option value="BV">Bouvet Island</option>
+	<option value="BR">Brazil</option>
+	<option value="IO">British Indian Ocean Territory</option>
+	<option value="BN">Brunei Darussalam</option>
+	<option value="BG">Bulgaria</option>
+	<option value="BF">Burkina Faso</option>
+	<option value="BI">Burundi</option>
+	<option value="KH">Cambodia</option>
+	<option value="CM">Cameroon</option>
+	<option value="CA">Canada</option>
+	<option value="CV">Cape Verde</option>
+	<option value="KY">Cayman Islands</option>
+	<option value="CF">Central African Republic</option>
+	<option value="TD">Chad</option>
+	<option value="CL">Chile</option>
+	<option value="CN">China</option>
+	<option value="CX">Christmas Island</option>
+	<option value="CC">Cocos (Keeling) Islands</option>
+	<option value="CO">Colombia</option>
+	<option value="KM">Comoros</option>
+	<option value="CG">Congo</option>
+	<option value="CD">Congo, The Democratic Republic Of The</option>
+	<option value="CK">Cook Islands</option>
+	<option value="CR">Costa Rica</option>
+	<option value="CI">Côte D'Ivoire</option>
+	<option value="HR">Croatia</option>
+	<option value="CU">Cuba</option>
+	<option value="CW">Curaçao</option>
+	<option value="CY">Cyprus</option>
+	<option value="CZ">Czech Republic</option>
+	<option value="DK">Denmark</option>
+	<option value="DJ">Djibouti</option>
+	<option value="DM">Dominica</option>
+	<option value="DO">Dominican Republic</option>
+	<option value="EC">Ecuador</option>
+	<option value="EG">Egypt</option>
+	<option value="SV">El Salvador</option>
+	<option value="GQ">Equatorial Guinea</option>
+	<option value="ER">Eritrea</option>
+	<option value="EE">Estonia</option>
+	<option value="ET">Ethiopia</option>
+	<option value="FK">Falkland Islands (Malvinas)</option>
+	<option value="FO">Faroe Islands</option>
+	<option value="FJ">Fiji</option>
+	<option value="FI">Finland</option>
+	<option value="FR">France</option>
+	<option value="GF">French Guiana</option>
+	<option value="PF">French Polynesia</option>
+	<option value="TF">French Southern Territories</option>
+	<option value="GA">Gabon</option>
+	<option value="GM">Gambia</option>
+	<option value="GE">Georgia</option>
+	<option value="DE">Germany</option>
+	<option value="GH">Ghana</option>
+	<option value="GI">Gibraltar</option>
+	<option value="GR">Greece</option>
+	<option value="GL">Greenland</option>
+	<option value="GD">Grenada</option>
+	<option value="GP">Guadeloupe</option>
+	<option value="GU">Guam</option>
+	<option value="GT">Guatemala</option>
+	<option value="GG">Guernsey</option>
+	<option value="GN">Guinea</option>
+	<option value="GW">Guinea-Bissau</option>
+	<option value="GY">Guyana</option>
+	<option value="HT">Haiti</option>
+	<option value="HM">Heard Island And Mcdonald Islands</option>
+	<option value="VA">Holy See (Vatican City State)</option>
+	<option value="HN">Honduras</option>
+	<option value="HK">Hong Kong</option>
+	<option value="HU">Hungary</option>
+	<option value="IS">Iceland</option>
+	<option value="IN">India</option>
+	<option value="ID">Indonesia</option>
+	<option value="IR">Iran, Islamic Republic Of</option>
+	<option value="IQ">Iraq</option>
+	<option value="IE">Ireland</option>
+	<option value="IM">Isle Of Man</option>
+	<option value="IL">Israel</option>
+	<option value="IT">Italy</option>
+	<option value="JM">Jamaica</option>
+	<option value="JP">Japan</option>
+	<option value="JE">Jersey</option>
+	<option value="JO">Jordan</option>
+	<option value="KZ">Kazakhstan</option>
+	<option value="KE">Kenya</option>
+	<option value="KI">Kiribati</option>
+	<option value="KP">Korea, Democratic People's Republic Of</option>
+	<option value="KR">Korea, Republic Of</option>
+	<option value="KW">Kuwait</option>
+	<option value="KG">Kyrgyzstan</option>
+	<option value="LA">Lao People's Democratic Republic</option>
+	<option value="LV">Latvia</option>
+	<option value="LB">Lebanon</option>
+	<option value="LS">Lesotho</option>
+	<option value="LR">Liberia</option>
+	<option value="LY">Libya</option>
+	<option value="LI">Liechtenstein</option>
+	<option value="LT">Lithuania</option>
+	<option value="LU">Luxembourg</option>
+	<option value="MO">Macao</option>
+	<option value="MK">Macedonia, The Former Yugoslav Republic Of</option>
+	<option value="MG">Madagascar</option>
+	<option value="MW">Malawi</option>
+	<option value="MY">Malaysia</option>
+	<option value="MV">Maldives</option>
+	<option value="ML">Mali</option>
+	<option value="MT">Malta</option>
+	<option value="MH">Marshall Islands</option>
+	<option value="MQ">Martinique</option>
+	<option value="MR">Mauritania</option>
+	<option value="MU">Mauritius</option>
+	<option value="YT">Mayotte</option>
+	<option value="MX">Mexico</option>
+	<option value="FM">Micronesia, Federated States Of</option>
+	<option value="MD">Moldova, Republic Of</option>
+	<option value="MC">Monaco</option>
+	<option value="MN">Mongolia</option>
+	<option value="ME">Montenegro</option>
+	<option value="MS">Montserrat</option>
+	<option value="MA">Morocco</option>
+	<option value="MZ">Mozambique</option>
+	<option value="MM">Myanmar</option>
+	<option value="NA">Namibia</option>
+	<option value="NR">Nauru</option>
+	<option value="NP">Nepal</option>
+	<option value="NL">Netherlands</option>
+	<option value="NC">New Caledonia</option>
+	<option value="NZ">New Zealand</option>
+	<option value="NI">Nicaragua</option>
+	<option value="NE">Niger</option>
+	<option value="NG">Nigeria</option>
+	<option value="NU">Niue</option>
+	<option value="NF">Norfolk Island</option>
+	<option value="MP">Northern Mariana Islands</option>
+	<option value="NO">Norway</option>
+	<option value="OM">Oman</option>
+	<option value="PK">Pakistan</option>
+	<option value="PW">Palau</option>
+	<option value="PS">Palestine, State Of</option>
+	<option value="PA">Panama</option>
+	<option value="PG">Papua New Guinea</option>
+	<option value="PY">Paraguay</option>
+	<option value="PE">Peru</option>
+	<option value="PH">Philippines</option>
+	<option value="PN">Pitcairn</option>
+	<option value="PL">Poland</option>
+	<option value="PT">Portugal</option>
+	<option value="PR">Puerto Rico</option>
+	<option value="QA">Qatar</option>
+	<option value="RE">Réunion</option>
+	<option value="RO">Romania</option>
+	<option value="RU">Russian Federation</option>
+	<option value="RW">Rwanda</option>
+	<option value="BL">Saint Barthélemy</option>
+	<option value="SH">Saint Helena, Ascension And Tristan Da Cunha</option>
+	<option value="KN">Saint Kitts And Nevis</option>
+	<option value="LC">Saint Lucia</option>
+	<option value="MF">Saint Martin (French Part)</option>
+	<option value="PM">Saint Pierre And Miquelon</option>
+	<option value="VC">Saint Vincent And The Grenadines</option>
+	<option value="WS">Samoa</option>
+	<option value="SM">San Marino</option>
+	<option value="ST">Sao Tome And Principe</option>
+	<option value="SA">Saudi Arabia</option>
+	<option value="SN">Senegal</option>
+	<option value="RS">Serbia</option>
+	<option value="SC">Seychelles</option>
+	<option value="SL">Sierra Leone</option>
+	<option value="SG">Singapore</option>
+	<option value="SX">Sint Maarten (Dutch Part)</option>
+	<option value="SK">Slovakia</option>
+	<option value="SI">Slovenia</option>
+	<option value="SB">Solomon Islands</option>
+	<option value="SO">Somalia</option>
+	<option value="ZA">South Africa</option>
+	<option value="GS">South Georgia And The South Sandwich Islands</option>
+	<option value="SS">South Sudan</option>
+	<option value="ES">Spain</option>
+	<option value="LK">Sri Lanka</option>
+	<option value="SD">Sudan</option>
+	<option value="SR">Suriname</option>
+	<option value="SJ">Svalbard And Jan Mayen</option>
+	<option value="SZ">Swaziland</option>
+	<option value="SE">Sweden</option>
+	<option value="CH">Switzerland</option>
+	<option value="SY">Syrian Arab Republic</option>
+	<option value="TW">Taiwan</option>
+	<option value="TJ">Tajikistan</option>
+	<option value="TZ">Tanzania, United Republic Of</option>
+	<option value="TH">Thailand</option>
+	<option value="TL">Timor-Leste</option>
+	<option value="TG">Togo</option>
+	<option value="TK">Tokelau</option>
+	<option value="TO">Tonga</option>
+	<option value="TT">Trinidad And Tobago</option>
+	<option value="TN">Tunisia</option>
+	<option value="TR">Turkey</option>
+	<option value="TM">Turkmenistan</option>
+	<option value="TC">Turks And Caicos Islands</option>
+	<option value="TV">Tuvalu</option>
+	<option value="UG">Uganda</option>
+	<option value="UA">Ukraine</option>
+	<option value="AE">United Arab Emirates</option>
+	<option value="GB">United Kingdom</option>
+	<option value="US">United States</option>
+	<option value="UM">United States Minor Outlying Islands</option>
+	<option value="UY">Uruguay</option>
+	<option value="UZ">Uzbekistan</option>
+	<option value="VU">Vanuatu</option>
+	<option value="VE">Venezuela, Bolivarian Republic Of</option>
+	<option value="VN">Viet Nam</option>
+	<option value="VG">Virgin Islands, British</option>
+	<option value="VI">Virgin Islands, U.S.</option>
+	<option value="WF">Wallis And Futuna</option>
+	<option value="EH">Western Sahara</option>
+	<option value="YE">Yemen</option>
+	<option value="ZM">Zambia</option>
+	<option value="ZW">Zimbabwe</option>
+</select></div></div>
+		<div id="fitem_id_timezone" class="fitem fitem_fselect"><div class="fitemtitle"><label for="id_timezone">Timezone </label></div><div class="felement fselect"><select name="timezone" id="id_timezone">
+	<option value="-13.0">UTC-13</option>
+	<option value="-12.5">UTC-12.5</option>
+	<option value="-12.0">UTC-12</option>
+	<option value="-11.5">UTC-11.5</option>
+	<option value="-11.0">UTC-11</option>
+	<option value="-10.5">UTC-10.5</option>
+	<option value="-10.0">UTC-10</option>
+	<option value="-9.5">UTC-9.5</option>
+	<option value="-9.0">UTC-9</option>
+	<option value="-8.5">UTC-8.5</option>
+	<option value="-8.0">UTC-8</option>
+	<option value="-7.5">UTC-7.5</option>
+	<option value="-7.0">UTC-7</option>
+	<option value="-6.5">UTC-6.5</option>
+	<option value="-6.0">UTC-6</option>
+	<option value="-5.5">UTC-5.5</option>
+	<option value="-5.0">UTC-5</option>
+	<option value="-4.5">UTC-4.5</option>
+	<option value="-4.0">UTC-4</option>
+	<option value="-3.5">UTC-3.5</option>
+	<option value="-3.0">UTC-3</option>
+	<option value="-2.5">UTC-2.5</option>
+	<option value="-2.0">UTC-2</option>
+	<option value="-1.5">UTC-1.5</option>
+	<option value="-1.0">UTC-1</option>
+	<option value="-0.5">UTC-0.5</option>
+	<option value="0.0">UTC</option>
+	<option value="0.5">UTC+0.5</option>
+	<option value="1.0">UTC+1</option>
+	<option value="1.5">UTC+1.5</option>
+	<option value="2.0">UTC+2</option>
+	<option value="2.5">UTC+2.5</option>
+	<option value="3.0">UTC+3</option>
+	<option value="3.5">UTC+3.5</option>
+	<option value="4.0">UTC+4</option>
+	<option value="4.5">UTC+4.5</option>
+	<option value="5.0">UTC+5</option>
+	<option value="5.5">UTC+5.5</option>
+	<option value="6.0">UTC+6</option>
+	<option value="6.5">UTC+6.5</option>
+	<option value="7.0">UTC+7</option>
+	<option value="7.5">UTC+7.5</option>
+	<option value="8.0">UTC+8</option>
+	<option value="8.5">UTC+8.5</option>
+	<option value="9.0">UTC+9</option>
+	<option value="9.5">UTC+9.5</option>
+	<option value="10.0">UTC+10</option>
+	<option value="10.5">UTC+10.5</option>
+	<option value="11.0">UTC+11</option>
+	<option value="11.5">UTC+11.5</option>
+	<option value="12.0">UTC+12</option>
+	<option value="12.5">UTC+12.5</option>
+	<option value="13.0">UTC+13</option>
+	<option value="99" selected="selected">Server's local time</option>
+</select></div></div>
+		<div id="fitem_id_lang" class="fitem fitem_fselect"><div class="fitemtitle"><label for="id_lang">Preferred language </label></div><div class="felement fselect"><select name="lang" id="id_lang">
+	<option value="en" selected="selected">English (en)</option>
+</select></div></div>
+		<div id="fitem_id_description_editor" class="fitem fitem_feditor"><div class="fitemtitle"><label for="id_description_editor">Description<span class="helptooltip"><a href="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/help.php?component=moodle&amp;identifier=userdescription&amp;lang=en" title="Help with Description" aria-haspopup="true" target="_blank"><img src="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/theme/image.php/magazine/core/1375935713/help" alt="Help with Description" class="iconhelp" /></a></span> </label></div><div class="felement feditor"><div><div><textarea id="id_description_editor" name="description_editor[text]" rows="15" cols="80" spellcheck="true" class=""></textarea></div><div><input name="description_editor[format]" type="hidden" value="1" /></div></div></div></div>
+		</div></fieldset>
+	<fieldset class="clearfix collapsible collapsed"  id="id_moodle_picture" aria-live="polite">
+		<legend class="ftoggler">User picture</legend>
+		<div class="fcontainer clearfix">
+		
+		<div class="fitem"><div class="fitemtitle"><div class="fstaticlabel"><label>Current picture </label></div></div><div class="felement fstatic">None&nbsp;</div></div>
+		<div id="fitem_id_deletepicture" class="fitem fitem_fcheckbox"><div class="fitemtitle"><label for="id_deletepicture">Delete </label></div><div class="felement fcheckbox"><span><input name="deletepicture" type="checkbox" value="1" id="id_deletepicture" /></span></div></div>
+		<div id="fitem_id_imagefile" class="fitem fitem_ffilemanager"><div class="fitemtitle"><label for="id_imagefile">New picture<span class="helptooltip"><a href="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/help.php?component=moodle&amp;identifier=newpicture&amp;lang=en" title="Help with New picture" aria-haspopup="true" target="_blank"><img src="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/theme/image.php/magazine/core/1375935713/help" alt="Help with New picture" class="iconhelp" /></a></span> </label></div><div class="felement ffilemanager">
+<div id="filemanager-52edbd6de8697" class="filemanager fm-loading">
+    <div class="fp-restrictions">
+        <span>Maximum size for new files: Unlimited, maximum attachments: 1</span>
+        <span class="dnduploadnotsupported-message"> - drag and drop not supported<span class="helptooltip"><a href="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/help.php?component=moodle&amp;identifier=dndnotsupported&amp;lang=en" title="Help with Drag and drop upload not supported" aria-haspopup="true" target="_blank"><img src="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/theme/image.php/magazine/core/1375935713/help" alt="Help with Drag and drop upload not supported" class="iconhelp" /></a></span> </span>
+    </div>
+    <div class="fp-navbar">
+        <div class="filemanager-toolbar">
+            <div class="fp-toolbar">
+                <div class="fp-btn-add"><a href="#"><img src="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/theme/image.php/magazine/core/1375935713/a/add_file" /> Add...</a></div>
+                <div class="fp-btn-mkdir"><a href="#"><img src="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/theme/image.php/magazine/core/1375935713/a/create_folder" /> Create folder</a></div>
+                <div class="fp-btn-download"><a href="#"><img src="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/theme/image.php/magazine/core/1375935713/a/download_all" /> Download all</a></div>
+            </div>
+            <div class="fp-viewbar">
+                <a title="Display folder with file icons" class="fp-vb-icons" href="#"></a>
+                <a title="Display folder with file details" class="fp-vb-details" href="#"></a>
+                <a title="Display folder as file tree" class="fp-vb-tree" href="#"></a>
+            </div>
+        </div>
+        <div class="fp-pathbar">
+            <span class="fp-path-folder"><a class="fp-path-folder-name" href="#"></a></span>
+        </div>
+    </div>
+    div class="filemanager-loading mdl-align"><img alt="Loading..." class="smallicon" title="Loading..." src="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/theme/image.php/magazine/core/1375935713/i/loading_small" /></div>
+    <div class="filemanager-container" >
+        <div class="fm-content-wrapper">
+            <div class="fp-content"></div>
+            <div class="fm-empty-container">
+                <div class="dndupload-message">You can drag and drop files here to add them.<br/><div class="dndupload-arrow"></div></div>
+            </div>
+            <div class="dndupload-target">Drop files here to upload<br/><div class="dndupload-arrow"></div></div>
+            <div class="dndupload-progressbars"></div>
+            <div class="dndupload-uploadinprogress"><img alt="Loading..." class="smallicon" title="Loading..." src="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/theme/image.php/magazine/core/1375935713/i/loading_small" /></div>
+        </div>
+        <div class="filemanager-updating"><img alt="Loading..." class="smallicon" title="Loading..." src="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/theme/image.php/magazine/core/1375935713/i/loading_small" /></div>
+    </div>
+</div><noscript><div><object type='text/html' data='http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/repository/draftfiles_manager.php?env=filemanager&amp;action=browse&amp;itemid=983328559&amp;subdirs=0&amp;maxbytes=-1&amp;areamaxbytes=-1&amp;maxfiles=1&amp;ctx_id=2&amp;course=1&amp;sesskey=AGCcSkvBJH' height='160' width='600' style='border:1px solid #000'></object></div></noscript><input value="983328559" name="imagefile" type="hidden" /><input value="" id="id_imagefile" type="hidden" /></div></div>
+		<div id="fitem_id_imagealt" class="fitem fitem_ftext"><div class="fitemtitle"><label for="id_imagealt">Picture description </label></div><div class="felement ftext"><input maxlength="100" size="30" name="imagealt" type="text" id="id_imagealt" /></div></div>
+		</div></fieldset>
+	<fieldset class="clearfix collapsible collapsed"  id="id_moodle_additional_names" aria-live="polite">
+		<legend class="ftoggler">Additional names</legend>
+		<div class="fcontainer clearfix">
+		
+		<div id="fitem_id_firstnamephonetic" class="fitem fitem_ftext"><div class="fitemtitle"><label for="id_firstnamephonetic">First name - phonetic </label></div><div class="felement ftext"><input maxlength="100" size="30" name="firstnamephonetic" type="text" id="id_firstnamephonetic" /></div></div>
+		<div id="fitem_id_lastnamephonetic" class="fitem fitem_ftext"><div class="fitemtitle"><label for="id_lastnamephonetic">Surname - phonetic </label></div><div class="felement ftext"><input maxlength="100" size="30" name="lastnamephonetic" type="text" id="id_lastnamephonetic" /></div></div>
+		<div id="fitem_id_middlename" class="fitem fitem_ftext"><div class="fitemtitle"><label for="id_middlename">Middle name </label></div><div class="felement ftext"><input maxlength="100" size="30" name="middlename" type="text" id="id_middlename" /></div></div>
+		<div id="fitem_id_alternatename" class="fitem fitem_ftext"><div class="fitemtitle"><label for="id_alternatename">Alternate name </label></div><div class="felement ftext"><input maxlength="100" size="30" name="alternatename" type="text" id="id_alternatename" /></div></div>
+		</div></fieldset>
+	<fieldset class="clearfix collapsible collapsed"  id="id_moodle_interests" aria-live="polite">
+		<legend class="ftoggler">Interests</legend>
+		<div class="fcontainer clearfix">
+		
+		<div id="fitem_id_interests" class="fitem fitem_ftags"><div class="fitemtitle"><div class="fgrouplabel"><label>List of interests<span class="helptooltip"><a href="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/help.php?component=moodle&amp;identifier=interestslist&amp;lang=en" title="Help with List of interests" aria-haspopup="true" target="_blank"><img src="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/theme/image.php/magazine/core/1375935713/help" alt="Help with List of interests" class="iconhelp" /></a></span> </label></div></div><fieldset class="felement ftags"><label class="accesshide" for="id_interests_othertags" >Enter tags separated by commas</label><textarea cols="40" rows="5" name="interests[othertags]" id="id_interests_othertags"></textarea></fieldset></div>
+		</div></fieldset>
+
+	<fieldset class="hidden"><div>
+		<div id="fitem_id_submitbutton" class="fitem fitem_actionbuttons fitem_fsubmit"><div class="felement fsubmit"><input name="submitbutton" value="Create user" type="submit" id="id_submitbutton" /></div></div>
+		<div class="fdescription required">There are required fields in this form marked <img alt="Required field" src="http://ec2-54-221-206-66.compute-1.amazonaws.com/moodle/theme/image.php/magazine/core/1375935713/req" />.</div>
+		</div></fieldset>
+</form></div>                                                                    				</div>
