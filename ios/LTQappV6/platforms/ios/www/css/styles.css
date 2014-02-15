@@ -515,7 +515,7 @@ text-decoration: none;
 }
 
 #add-site {
-  background: #fa8f1c url(../img/orange-bg.png);
+  background: #fa8f1c url(../img/blue-bg.png);
   padding-top: 4.92308rem;
 }
 
@@ -1157,13 +1157,14 @@ button {
 }
 
 #helplogin {
-  text-align: center;
+  padding-left: 20px;
+  text-align: left;
   width: 100%;
 }
 
 #helplogin a{
   color: white;
-  font-size: 1.4em;
+  font-size: 1.1em;
 }
 
 .users-index-list li{

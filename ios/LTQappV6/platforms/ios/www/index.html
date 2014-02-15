@@ -286,28 +286,33 @@
 
 <script type="text/template" id="add-site_template">
 <h1>
-    <img src="img/login-logo.png" alt="Moodle">
+    <img src="img/imgcust/logo.png" alt="Moodle">
 </h1>
 <form action="">
-    <!--<p>
-        <input type="url" id="url" autocapitalize="off" autocorrect="off" placeholder="<%= MM.lang.s("siteurl") %>">
-    </p>-->
     <p>
         <input type="text" id="username" autocapitalize="off" autocorrect="off" placeholder="<%= MM.lang.s("username") %>">
     </p>
     <p>
         <input type="password" id="password" placeholder="<%= MM.lang.s("password") %>">
     </p>
+
     <p>
-    <a href="register.html">Register (First Time User)</a>
+        <input type="submit" name="add" id="addsitebutton" value="<%= MM.lang.s("login") %>">
     </p>
-    <p>
-        <input type="submit" name="add" id="addsitebutton" value="<%= MM.lang.s("add") %>">
-    </p>
-</form>
+    </form>
+
 <div id= "helplogin">
-    <a href="#helpmelogin"><%= MM.lang.s("icantlogin") %></a>
+<p>
+<a href="register.html"><%= MM.lang.s("ltq-register") %></a>
+</p>
+<p>
+<a href="#helpmelogin"><%= MM.lang.s("icantlogin") %></a>
+</p>
+
 </div>
+<!--<div id= "helplogin">
+    <a href="#helpmelogin"><%= MM.lang.s("icantlogin") %></a>
+</div>-->
 </script>
 </body>
 </html>
