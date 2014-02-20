@@ -36,7 +36,6 @@
         // We should wait to phonegap, if not, we get errors like:
         // http://rickluna.com/wp/2012/04/solving-the-connection-to-the-server-was-unsuccessful-error-in-androidphonegap/
         $(document).bind('deviceready', function() {
-                         
             MM.log('Deviceready fired');
             MM.deviceReady = true;
             // Store the device locale for further uses.
@@ -47,7 +46,6 @@
                 },
                 function () {}
             );
-                         
             // Disable the back button, exists the app.
             document.addEventListener("backbutton", function() {
                 MM.panels.goBack();
@@ -65,19 +63,15 @@
                     }
                 }
             }, 5000);
-                         
-            console.log("LTQ console log works! bef fs.init");
             MM.fs.init();
-            console.log("LTQ console log works! aft fs.init");
-             
         });
 	</script>
     <!-- Uncomment to display errors in xcode -->
-    <script type="text/javascript">
+    <!--script type="text/javascript">
         window.onerror = function(message, url, lineNumber) {
             console.log("Error: "+message+" in "+url+" at line "+lineNumber);
         }
-    </script>
+    </script-->
     <style id="mobilecssurl"></style>
 </head>
 <body>
