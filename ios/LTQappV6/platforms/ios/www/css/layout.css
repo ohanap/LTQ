@@ -61,7 +61,15 @@ body {
 #mycourses {
 	overflow: auto;
 	width: 100%;
+    /*LTQ*/
+    /*background: #3a8fd4;*/
 }
+
+
+
+
+
+
 
 #add-site h1,
 #add-site form {

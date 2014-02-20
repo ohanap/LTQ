@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		057417FDBD6E4B14AB831E3A /* CDVFileTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 559B2CC882594E12BD4FDC7C /* CDVFileTransfer.m */; };
 		07A7987FEBAA46E5B27D5908 /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D03A3E912948038DEC2507 /* CDVFile.m */; };
@@ -129,6 +130,8 @@
 		CC4C92AF1890D0D1008F0D45 /* viewportrait2.png in Resources */ = {isa = PBXBuildFile; fileRef = CC4C926D1890D0D1008F0D45 /* viewportrait2.png */; };
 		CC4C92B11890D256008F0D45 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4C92B01890D256008F0D45 /* MessageUI.framework */; };
 		CC4C92B31890D447008F0D45 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4C92B21890D447008F0D45 /* QuartzCore.framework */; };
+		CC8B4FC518B68C1B0030EE5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC8B4FC418B68C1B0030EE5B /* UIKit.framework */; };
+		CC8B4FC818B68C2D0030EE5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC8B4FC718B68C2D0030EE5B /* Foundation.framework */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		D911B5EDC7E54F3FA55F5454 /* CDVKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 30993DC8786142018052454F /* CDVKeyboard.m */; };
 		E654157BB8704158A1BD85B7 /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 229BC5C575FC4F0983B97524 /* CDVLocation.m */; };
@@ -323,6 +326,8 @@
 		CC4C926D1890D0D1008F0D45 /* viewportrait2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewportrait2.png; sourceTree = "<group>"; };
 		CC4C92B01890D256008F0D45 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		CC4C92B21890D447008F0D45 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CC8B4FC418B68C1B0030EE5B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CC8B4FC718B68C2D0030EE5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE1A7D7B3C1649C093AFFDE4 /* AddressBookUI.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		D3D03A3E912948038DEC2507 /* CDVFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVFile.m; path = org.apache.cordova.file/CDVFile.m; sourceTree = "<group>"; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
@@ -343,6 +348,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC8B4FC818B68C2D0030EE5B /* Foundation.framework in Frameworks */,
+				CC8B4FC518B68C1B0030EE5B /* UIKit.framework in Frameworks */,
 				CC4C92B31890D447008F0D45 /* QuartzCore.framework in Frameworks */,
 				CC4C92B11890D256008F0D45 /* MessageUI.framework in Frameworks */,
 				5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */,
@@ -445,6 +452,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CC8B4FC718B68C2D0030EE5B /* Foundation.framework */,
+				CC8B4FC418B68C1B0030EE5B /* UIKit.framework */,
 				CC4C92B21890D447008F0D45 /* QuartzCore.framework */,
 				CC4C92B01890D256008F0D45 /* MessageUI.framework */,
 				5AEE5B34173C68D80009041E /* CoreLocation.framework */,

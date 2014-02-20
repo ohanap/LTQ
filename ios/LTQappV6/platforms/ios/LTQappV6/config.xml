@@ -50,6 +50,9 @@
         <param name="ios-package" value="CDVSplashScreen" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="CDVPDFViewer">
+        <param name="ios-package" value="CDVPDFViewer"/>
+    </feature>
     <name>LTQappV6</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

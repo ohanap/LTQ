@@ -1791,8 +1791,15 @@ anchor      (\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(
                 } else {
                     // Changing _blank for _system may work in cordova 2.4 and onwards
                     MM.log('Open external file using window.open');
-                    window.open(link, '_blank');
-                }
+                    try{
+                    if (link.indexOf(".pdf") !=-1) {
+                          cordova.exec(null, null, 'CDVPDFViewer', 'showPDF',[link]);
+                    }else{
+                          window.open(link, '_blank');
+                    }
+                    }
+                     catch(e){MM.log('LTQ issue while opening external file');}
+                    }
             } else {
                 // Changing _blank for _system may work in cordova 2.4 and onwards
                 MM.log('Open external file using window.open');
