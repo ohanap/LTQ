@@ -328,10 +328,15 @@ ol {
 }
 
 .header-main {
-  background-color: #fa8f1c;
+  /*background-color: #fa8f1c;
   box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.3) inset;
-  color: #FFF;
-  height: 40px;
+  color: #FFF;*/
+    color: #FFF;
+    background: #00347F; 
+	background: -moz-linear-gradient(top, #001849 0%, #004DAA 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#001849), color-stop(100%,#004DAA)); 
+	border-bottom: 1px solid #001849;
+   height: 40px;
   line-height: 40px;
 }
 .header-main .nav-main {
@@ -368,9 +373,23 @@ ol {
 
 /* - user-menu
 -------------------------------------------------------------------------- */
+/*
+    color: #FFF;
+    background: #00347F; 
+	background: -moz-linear-gradient(top, #001849 0%, #004DAA 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#001849), color-stop(100%,#004DAA)); 
+	border-bottom: 1px solid #001849;
+
+*/
+
 .panel.user-menu {
-  background-color: #fa8f1c;
-  color: #fff;
+/*background-color: #fa8f1c;*/
+/*background-color: #004DAA;
+  color: #fff;*/
+	background: #3a8fd4; /* old browsers */
+	background: -moz-linear-gradient(top, #3a8fd4 0%, #203781 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3a8fd4), color-stop(100%,#203781)); /* webkit */
+	color: #fff;
   font-size: 12px;
   font-size: 0.875rem;
   padding-bottom: 40px;

@@ -5,15 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>6FD52813-BC80-4AAA-AEB1-BCA5A67A4311</string>
+	<string>FB82417A-EB50-4F4C-967E-B8D2FEB0A6DD</string>
 	<key>IDESourceControlProjectName</key>
 	<string>LTQappV6</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>29FB385F-6FDA-406B-9021-D51CEC81B861</key>
 		<string>https://github.com/ohanap/LTQ.git</string>
-		<key>821AD80B-0070-49B9-ACBF-CD6D95F471C8</key>
-		<string>https://github.com/moodlehq/moodlemobile.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ios/LTQappV6/platforms/ios/LTQappV6.xcodeproj/project.xcworkspace</string>
@@ -21,8 +19,6 @@
 	<dict>
 		<key>29FB385F-6FDA-406B-9021-D51CEC81B861</key>
 		<string>../../../../../..</string>
-		<key>821AD80B-0070-49B9-ACBF-CD6D95F471C8</key>
-		<string>../../www</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/ohanap/LTQ.git</string>
@@ -39,14 +35,6 @@
 			<string>29FB385F-6FDA-406B-9021-D51CEC81B861</string>
 			<key>IDESourceControlWCCName</key>
 			<string>LTQ</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>821AD80B-0070-49B9-ACBF-CD6D95F471C8</string>
-			<key>IDESourceControlWCCName</key>
-			<string>www</string>
 		</dict>
 	</array>
 </dict>
