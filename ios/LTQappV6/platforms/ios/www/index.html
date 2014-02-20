@@ -191,7 +191,14 @@
                       </ul>
             
             
-                      <h2><%= MM.lang.s("mycourses") %></h2>
+                      <h2><%= MM.lang.s("mycourses") %>
+                      <div class="refresh">
+                      <a href="#refresh">
+                      <img width="16" height="16" src="img/reload.png" border="0">
+                      </a>
+                      </div>
+                      </h2>
+                      
                       <div id="mycourses">
                       <ul class="nav nav-v js-accordion">
                       <% _.each(courses, function(course) { %>

@@ -405,7 +405,9 @@ ol {
   font-size: 1.25rem;
 }
 .panel.user-menu h2 {
-  background: rgba(240, 130, 10, 0.3);
+  /*background: rgba(240, 130, 10, 0.3);*/
+  /*LTQ*/
+  background: #00347F;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   box-shadow: 0 20px 40px -10px rgba(160, 70, 0, 0.3) inset;

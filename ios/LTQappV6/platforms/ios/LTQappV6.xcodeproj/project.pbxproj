@@ -52,7 +52,6 @@
 		9191C594D6FF4B2EA25A20BC /* CDVContact.m in Sources */ = {isa = PBXBuildFile; fileRef = F214B1F6E385436FBE6681FE /* CDVContact.m */; };
 		C271000533964C198ABDD045 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D7183DAA584247BECD238B /* AddressBook.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C3DA0D4223A54F708BCF4D1B /* CDVJpegHeaderWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 67821427289449E59E6EA398 /* CDVJpegHeaderWriter.m */; };
-		CC50CB5C18B08B8500B8B037 /* index1.html in Resources */ = {isa = PBXBuildFile; fileRef = CC50CB5B18B08B8500B8B037 /* index1.html */; };
 		CC8B4F8218B68B040030EE5B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CC8B4F2718B68B040030EE5B /* .gitignore */; };
 		CC8B4F8318B68B040030EE5B /* AddFilesToProject.png in Resources */ = {isa = PBXBuildFile; fileRef = CC8B4F2818B68B040030EE5B /* AddFilesToProject.png */; };
 		CC8B4F8418B68B040030EE5B /* AddProjectsToProject2.png in Resources */ = {isa = PBXBuildFile; fileRef = CC8B4F2918B68B040030EE5B /* AddProjectsToProject2.png */; };
@@ -218,7 +217,6 @@
 		ACD6437260ED4F0F8EDB502C /* AddressBookUI.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		C507EAE89AE747B8A14D2681 /* CDVSplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVSplashScreen.h; path = org.apache.cordova.splashscreen/CDVSplashScreen.h; sourceTree = "<group>"; };
 		CB05A742408A4863B243D033 /* CDVSplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVSplashScreen.m; path = org.apache.cordova.splashscreen/CDVSplashScreen.m; sourceTree = "<group>"; };
-		CC50CB5B18B08B8500B8B037 /* index1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index1.html; path = www/index1.html; sourceTree = "<group>"; };
 		CC8B4F2718B68B040030EE5B /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		CC8B4F2818B68B040030EE5B /* AddFilesToProject.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddFilesToProject.png; sourceTree = "<group>"; };
 		CC8B4F2918B68B040030EE5B /* AddProjectsToProject2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddProjectsToProject2.png; sourceTree = "<group>"; };
@@ -385,7 +383,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				CC50CB5B18B08B8500B8B037 /* index1.html */,
 				F840E1F0165FE0F500CFE078 /* config.xml */,
 				301BF56E109A69640062928A /* www */,
 				301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */,
@@ -729,7 +726,6 @@
 				CC8B4F9218B68B040030EE5B /* ipadlandscapeview3.png in Resources */,
 				CC8B4F8218B68B040030EE5B /* .gitignore in Resources */,
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
-				CC50CB5C18B08B8500B8B037 /* index1.html in Resources */,
 				CC8B4F9418B68B040030EE5B /* ipadlandscapeview5.png in Resources */,
 				CC8B4FA018B68B040030EE5B /* Reader-Mark-Y.png in Resources */,
 				CC8B4FA218B68B040030EE5B /* Reader-Print.png in Resources */,
