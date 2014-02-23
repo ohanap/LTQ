@@ -1793,8 +1793,10 @@ anchor      (\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(
                     MM.log('Open external file using window.open');
                     try{
                     if (link.indexOf(".pdf") !=-1) {
+                          console.log("LTQ in in in pdf");
                           cordova.exec(null, null, 'CDVPDFViewer', 'showPDF',[link]);
                     }else{
+                          console.log("LTQ NOT NOT in in in pdf");
                           window.open(link, '_blank','location=no');
                     }
                     }
@@ -1802,8 +1804,21 @@ anchor      (\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(
                     }
             } else {
                 // Changing _blank for _system may work in cordova 2.4 and onwards
-                MM.log('Open external file using window.open');
-                window.open(link, '_blank','location=no');
+                //MM.log('Open external file using window.open');
+                //window.open(link, '_blank','location=no');
+                    MM.log('Open external file using window.open');
+                    try{
+                    if (link.indexOf(".pdf") !=-1) {
+                          console.log("LTQ in in in pdf");
+                          cordova.exec(null, null, 'CDVPDFViewer', 'showPDF',[link]);
+                    }else{
+                          console.log("LTQ NOT NOT in in in pdf");
+                          window.open(link, '_blank','location=no');
+                    }
+                    }
+                     catch(e){MM.log('LTQ issue while opening external file');}
+                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
             }
         }
         if (typeof(MM.plugins.contents.infoBox) != "undefined") {

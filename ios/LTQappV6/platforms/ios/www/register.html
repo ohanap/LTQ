@@ -35,18 +35,16 @@
                              $(function(){
                                $('form').submit(function(){
                                                 
-                                                console.log("LTQ:right bef");
 
                                                 try
                                                 {
-                                                if (checkEmail()){
+                                                if (checkEmail() && checkPassword() && nameNotBlank()){
                                                 console.log("LTQ:m1");
 
                                                 localStorage.setItem("fname",document.forms["registerForm"]["fname"].value);
                                                 localStorage.setItem("lname",document.forms["registerForm"]["lname"].value);
                                                 localStorage.setItem("email",document.forms["registerForm"]["email"].value);
                                                 localStorage.setItem("upassword",document.forms["registerForm"]["upassword"].value);
-                                                console.log("LTQ:m2");
                                                 storeInfo();
                                                 console.log("LTQ:m3");
                                                 window.location = "index.html";
@@ -159,6 +157,30 @@
             return true;
         }
         
+        function checkPassword() {
+            console.log("LTQ in checkpassword");
+            var filter = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[\#\?\!\@\$\%\^\&\*\-\_]).{8,}/;
+            if (!filter.test(document.forms["registerForm"]["upassword"].value)) {
+                console.log("LTQ before the alert");
+                alert('The password must have at least 8 characters, at least 1 digit(s), at least 1 lower case letter(s), at least 1 upper case letter(s), at least 1 non-alphanumeric character(s)');
+                document.forms["registerForm"]["upassword"].focus;
+                return false;
+            }
+            console.log("LTQ in checkpassword no alert");
+            return true;
+        }
+        
+        function nameNotBlank() {
+    
+            if (document.forms["registerForm"]["fname"].value && document.forms["registerForm"]["lname"].value ){
+                return true;
+            }
+            alert('Make sure First Name and Last Name are not empty');
+            return false;
+        }
+        
+        
+        
             </script>
         
     </head>
@@ -188,15 +210,19 @@
                                     <td><input type="email" id="email" placeholder="email address required" required /></td>
                                 </tr>
                                 <tr>
-                                    <td><label for="name">First Name:</label></td>
+                                    <td><label for="name">First Name<sup>*</sup>:</label></td>
                                     <td><input type="text" id="fname" placeholder="enter first name" /></td>
                                 </tr>
                                 <tr>
-                                    <td><label for="name">Last Name:</label></td>
+                                    <td><label for="name">Last Name<sup>*</sup>:</label></td>
                                     <td><input type="text" id="lname" placeholder="enter last name" /></td>
                                 </tr>
+                                
                                 <tr>
-                                    <td><label for="name">Password:</label></td>
+                                    <td colspan="2">The password must have at least 8 characters, at least 1 digit(s), at least 1 lower case letter(s), at least 1 upper case letter(s), at least 1 non-alphanumeric character(s) </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="name">Password<sup>*</sup>:</label></td>
                                     <td><input type="password" id="upassword" placeholder="enter a password" /></td>
                                 </tr>
                                 <tr>
