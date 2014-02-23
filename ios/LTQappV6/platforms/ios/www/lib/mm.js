@@ -1673,7 +1673,7 @@ anchor      (\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(
                     );
                 } catch(e) {
                     MM.log('Launching childBrowser failed!, opening as standard link');
-                    window.open(link, '_blank');
+                    window.open(link, '_blank','location=no');
                 }
             }
             else if(typeof(navigator.app) != "undefined" && typeof(navigator.app.loadUrl) != "undefined") {
@@ -1681,7 +1681,7 @@ anchor      (\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(
                 navigator.app.loadUrl(link, { openExternal:true } );
             } else {
                 MM.log('Opening external link using window.open');
-                window.open(link, '_blank');
+                window.open(link, '_blank','location=no');
             }
         }
         if (typeof(MM.plugins.contents.infoBox) != "undefined") {
@@ -1771,7 +1771,7 @@ anchor      (\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(
                                 MM.log('url: ' + iParams.url);
                                 MM.log('type: ' + iParams.type);
                                 // This may work in cordova 2.4 and onwards
-                                window.open(link, '_blank');
+                                window.open(link, '_blank','location=no');
                             }
                         );
                 } else if (MM._canUseChildBrowser()) {
@@ -1786,7 +1786,7 @@ anchor      (\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(
                         );
                     } catch(e) {
                         MM.log('Launching childBrowser failed!, opening as standard link');
-                        window.open(link, '_blank');
+                        window.open(link, '_blank','location=no');
                     }
                 } else {
                     // Changing _blank for _system may work in cordova 2.4 and onwards
@@ -1795,7 +1795,7 @@ anchor      (\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(
                     if (link.indexOf(".pdf") !=-1) {
                           cordova.exec(null, null, 'CDVPDFViewer', 'showPDF',[link]);
                     }else{
-                          window.open(link, '_blank');
+                          window.open(link, '_blank','location=no');
                     }
                     }
                      catch(e){MM.log('LTQ issue while opening external file');}
@@ -1803,7 +1803,7 @@ anchor      (\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(
             } else {
                 // Changing _blank for _system may work in cordova 2.4 and onwards
                 MM.log('Open external file using window.open');
-                window.open(link, '_blank');
+                window.open(link, '_blank','location=no');
             }
         }
         if (typeof(MM.plugins.contents.infoBox) != "undefined") {
