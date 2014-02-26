@@ -6,6 +6,7 @@
                 <meta name="viewport" content="width=device-width">
                     <link rel="stylesheet" href="css/layout.css">
                         <link rel="stylesheet" href="css/styles.css">
+                        <link rel="stylesheet" href="css/stylep1.css">
                             <script src="cordova.js"></script>
                             <script src="childbrowser.js"></script>
                             <script src="webintent.js"></script>
@@ -77,8 +78,12 @@
     </head>
     <body>
         
+        
+        <div class="toolbar">
+                <div class="logo"><img src="img/imgcust/logo.png" width="141" height="23" alt="LearnToQuality" /></div>
+        </div>
+        
         <div id="add-site" style="display: none">
-            
         </div>
         
         <div id="main-wrapper" style="display: none">
@@ -295,9 +300,9 @@
             </script>
         
         <script type="text/template" id="add-site_template">
-            <h1>
+            <!--<h1>
             <img src="img/imgcust/logo.png" alt="Moodle">
-            </h1>
+            </h1>-->
             <form action="">
             <p>
             <input type="text" id="username" autocapitalize="off" autocorrect="off" placeholder="<%= MM.lang.s("username") %>">
@@ -323,9 +328,7 @@
             
             
             </div>
-            <!--<div id= "helplogin">
-            <a href="#helpmelogin"><%= MM.lang.s("icantlogin") %></a>
-            </div>-->
+   
             </script>
     </body>
 </html>

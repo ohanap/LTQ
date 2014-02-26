@@ -1,0 +1,17 @@
+
+.toolbar {
+    width:100%;
+	height: 35px;
+	padding: 5px 0 0 0;	
+    background: #00347F; 
+	background: -moz-linear-gradient(top, #001849 0%, #004DAA 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#001849), color-stop(100%,#004DAA)); 
+	border-bottom: 1px solid #001849;
+	}
+	
+.logo {	
+	width: 141px;
+	height: 23px;
+	padding: 5px 0 0 5px;
+	float: left;
+}

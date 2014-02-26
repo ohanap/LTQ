@@ -117,6 +117,11 @@
 		CC8B4FCC18B68C6B0030EE5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC8B4FCB18B68C6B0030EE5B /* Foundation.framework */; };
 		CC8B4FCE18B68C830030EE5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC8B4FCD18B68C830030EE5B /* QuartzCore.framework */; };
 		CC8B4FD018B68C970030EE5B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC8B4FCF18B68C970030EE5B /* MessageUI.framework */; };
+		CCCA894018BDC247009039D5 /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = CCCA893E18BDC247009039D5 /* Default-568h@2x~iphone.png */; };
+		CCCA894118BDC247009039D5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CCCA893F18BDC247009039D5 /* Default.png */; };
+		CCCA894518BDC4D1009039D5 /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = CCCA894218BDC4D1009039D5 /* icon-76.png */; };
+		CCCA894618BDC4D1009039D5 /* Icon@2x-120.png in Resources */ = {isa = PBXBuildFile; fileRef = CCCA894318BDC4D1009039D5 /* Icon@2x-120.png */; };
+		CCCA894718BDC4D1009039D5 /* Icon@2x-152.png in Resources */ = {isa = PBXBuildFile; fileRef = CCCA894418BDC4D1009039D5 /* Icon@2x-152.png */; };
 		D518079B7E294DBFB95F6454 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174BEEA1E1F842DEA687DAD9 /* ImageIO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E1380E462DD34C20A2356225 /* CDVCapture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 458DBA5DF8E94A7390FE9A42 /* CDVCapture.bundle */; };
 		E558227EDB2C43B78E435B84 /* CDVFileTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5D30F1BF3C4C38A9F40830 /* CDVFileTransfer.m */; };
@@ -302,6 +307,11 @@
 		CC8B4FCB18B68C6B0030EE5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CC8B4FCD18B68C830030EE5B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CC8B4FCF18B68C970030EE5B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		CCCA893E18BDC247009039D5 /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
+		CCCA893F18BDC247009039D5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		CCCA894218BDC4D1009039D5 /* icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-76.png"; sourceTree = "<group>"; };
+		CCCA894318BDC4D1009039D5 /* Icon@2x-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x-120.png"; sourceTree = "<group>"; };
+		CCCA894418BDC4D1009039D5 /* Icon@2x-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x-152.png"; sourceTree = "<group>"; };
 		DD1BD89FFB824827917CBA33 /* CDVDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVDevice.h; path = org.apache.cordova.device/CDVDevice.h; sourceTree = "<group>"; };
 		DD6A01E43B8F4D60816A98D9 /* CDVConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVConnection.m; path = "org.apache.cordova.network-information/CDVConnection.m"; sourceTree = "<group>"; };
 		F214B1F6E385436FBE6681FE /* CDVContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVContact.m; path = org.apache.cordova.contacts/CDVContact.m; sourceTree = "<group>"; };
@@ -480,6 +490,9 @@
 		308D052D1370CCF300D202BF /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				CCCA894218BDC4D1009039D5 /* icon-76.png */,
+				CCCA894318BDC4D1009039D5 /* Icon@2x-120.png */,
+				CCCA894418BDC4D1009039D5 /* Icon@2x-152.png */,
 				30FC414816E50CA1004E6F35 /* icon-72@2x.png */,
 				CC1BC44E18BC2FCD00C42B53 /* icon-72.png */,
 				CC1BC44F18BC2FCD00C42B53 /* icon-72@2x.png */,
@@ -496,6 +509,8 @@
 		308D05311370CCF300D202BF /* splash */ = {
 			isa = PBXGroup;
 			children = (
+				CCCA893E18BDC247009039D5 /* Default-568h@2x~iphone.png */,
+				CCCA893F18BDC247009039D5 /* Default.png */,
 				3088BBB7154F3926009F9C59 /* Default-Landscape@2x~ipad.png */,
 				3088BBB8154F3926009F9C59 /* Default-Landscape~ipad.png */,
 				3088BBB9154F3926009F9C59 /* Default-Portrait@2x~ipad.png */,
@@ -705,6 +720,7 @@
 				CC1BC45618BC2FCD00C42B53 /* icon.png in Resources */,
 				CC1BC45518BC2FCD00C42B53 /* Icon-72@2x.png.old.png in Resources */,
 				CC8B4F9318B68B040030EE5B /* ipadlandscapeview4.png in Resources */,
+				CCCA894718BDC4D1009039D5 /* Icon@2x-152.png in Resources */,
 				CC8B4FC018B68B040030EE5B /* viewlandscape.png in Resources */,
 				F840E1F1165FE0F500CFE078 /* config.xml in Resources */,
 				CC8B4F9618B68B040030EE5B /* iphoneportrait.png in Resources */,
@@ -735,6 +751,7 @@
 				CC8B4F9918B68B040030EE5B /* Reader-Button-H@2x.png in Resources */,
 				CC1BC45418BC2FCD00C42B53 /* icon-72@2x.png in Resources */,
 				CC8B4FA418B68B040030EE5B /* Reader-Thumbs.png in Resources */,
+				CCCA894118BDC247009039D5 /* Default.png in Resources */,
 				CC8B4FBC18B68B040030EE5B /* ScreenShot2.png in Resources */,
 				3088BBBE154F3926009F9C59 /* Default-Landscape~ipad.png in Resources */,
 				3088BBBF154F3926009F9C59 /* Default-Portrait@2x~ipad.png in Resources */,
@@ -747,10 +764,12 @@
 				CC8B4F8B18B68B040030EE5B /* CopyJSToWWW2.png in Resources */,
 				CC8B4F9F18B68B040030EE5B /* Reader-Mark-N@2x.png in Resources */,
 				CC8B4F9C18B68B040030EE5B /* Reader-Email.png in Resources */,
+				CCCA894018BDC247009039D5 /* Default-568h@2x~iphone.png in Resources */,
 				3088BBC1154F3926009F9C59 /* Default@2x~iphone.png in Resources */,
 				CC8B4F9118B68B040030EE5B /* ipadlandscapeview2.png in Resources */,
 				CC1BC45718BC2FCD00C42B53 /* Icon@2x.png in Resources */,
 				3088BBC2154F3926009F9C59 /* Default~iphone.png in Resources */,
+				CCCA894618BDC4D1009039D5 /* Icon@2x-120.png in Resources */,
 				CC8B4FBB18B68B040030EE5B /* ScreenShot1.png in Resources */,
 				CC8B4FBA18B68B040030EE5B /* SampleIndexHTML.png in Resources */,
 				CC8B4F8418B68B040030EE5B /* AddProjectsToProject2.png in Resources */,
@@ -760,6 +779,7 @@
 				CC8B4FA318B68B040030EE5B /* Reader-Print@2x.png in Resources */,
 				30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */,
 				E1380E462DD34C20A2356225 /* CDVCapture.bundle in Resources */,
+				CCCA894518BDC4D1009039D5 /* icon-76.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
